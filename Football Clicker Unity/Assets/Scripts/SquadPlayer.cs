@@ -11,14 +11,15 @@ public class SquadPlayer : UpgradeableClickerObject {
     [SerializeField]
     private TeamManager mTeamManager;
 
-    public SquadPlayer(float upgradeCost, Club club, string postition) : base(upgradeCost, club)
+    public SquadPlayer(float upgradeCost, Club club, string postition, TeamManager manager) : base(upgradeCost, club)
     {
         mPosition = postition;
         SaleValue = upgradeCost / 2;
+        mTeamManager = manager;
     }
 
     // Use this for initialization
-    void Start()
+    public override void Start()
     {
         base.IsEnabled = true;
     }

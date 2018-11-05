@@ -14,7 +14,6 @@ public class AutomatedManagerObject : MonoBehaviour {
     [SerializeField]
     protected float mPurchaseCost;
 
-
     // Use this for initialization
     public virtual void Start () {
         mPurchaseCost = mObjectToManage.UpgradeCost * 5.15f;
@@ -41,7 +40,7 @@ public class AutomatedManagerObject : MonoBehaviour {
 
     public void PurchaseClick()
     {
-        if (mIsEnabled)
+        if (mIsEnabled && mObjectToManage.UpgradeLevel > 0)
         {
             mIsEnabled = false;
             mClub.UpdateMoney(-mPurchaseCost);

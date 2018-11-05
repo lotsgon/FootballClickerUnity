@@ -44,15 +44,14 @@ public class TeamManager : MonoBehaviour
             }
         }
 
-        mFullSquad = true;
-        foreach (SquadPlayer player in mSquadPlayers)
-        {
-            if (player.TimeUntilIncome <= 0)
+            mFullSquad = true;
+            foreach (SquadPlayer player in mSquadPlayers)
             {
-                player.OnIncomeClick();
+                if (player.TimeUntilIncome <= 0)
+                {
+                    player.OnIncomeClick();
+                }
             }
-        }
-
     }
 
     // Update is called once per frame

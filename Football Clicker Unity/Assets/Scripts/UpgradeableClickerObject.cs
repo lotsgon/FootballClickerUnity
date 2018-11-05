@@ -16,7 +16,6 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     protected float mUpgradeCost = 0f;
     [SerializeField]
     protected Club mClub;
-    private float mNewCost = 0f;
 
     public UpgradeableClickerObject(float upgradeCost, Club club)
     {
@@ -26,10 +25,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     }
 
     // Use this for initialization
-    public virtual void Start()
-    {
-        UpdateUpgradeIncome(0.0f, 0.0f);
-    }
+    public abstract void Start();
 
     // Update is called once per frame
 
@@ -71,7 +67,6 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     protected void UpdateUpgradeCost(float upgradeValue)
     {
         mUpgradeCost = Mathf.Round(mUpgradeCost * upgradeValue);
-        mNewCost = Mathf.Pow(mUpgradeCost, mNewCost = mUpgradeCost);
     }
 
     protected void UpdateUpgradeIncome(float incomeValue, float timeValue)

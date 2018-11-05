@@ -4,7 +4,6 @@ public class SquadPlayer : UpgradeableClickerObject {
 
     public string Position { get { return mPosition; } set { mPosition = value; } }
     public float SaleValue { get; private set; }
-    public UnityEngine.UI.Text SellText;
 
     [SerializeField]
     private string mPosition;
@@ -48,11 +47,5 @@ public class SquadPlayer : UpgradeableClickerObject {
     {
         base.OnUpgradeClick();
         SaleValue = mUpgradeCost / 2;
-    }
-
-    public override void UpdateText()
-    {
-        base.UpdateText();
-        SellText.text = $"Sell: {SaleValue}";
     }
 }

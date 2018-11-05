@@ -22,7 +22,7 @@ public class Club : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        MoneyDisplay.text = $"Money: {this.Money}";
+        MoneyDisplay.text = Money.ToString("C2");
     }
 
     // Update is called once per second

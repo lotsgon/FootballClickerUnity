@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class UpgradeableClickerObject : MonoBehaviour
 {
@@ -9,13 +10,17 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     public float TimeUntilIncome { get; private set; } = 0;
     public bool CanUpgrade { get; private set; } = true;
     public float Income { get; private set; } = 0f;
-    public UnityEngine.UI.Text UpgradeText;
-    public UnityEngine.UI.Text IncomeText;
+    public Text UpgradeText;
+    public Text LevelText;
+    public Text IncomeText;
+    public Text TimeText;
+    public Image fillImage;
 
     [SerializeField]
     protected float mUpgradeCost = 0f;
     [SerializeField]
     protected Club mClub;
+    private float fillTime;
 
     public UpgradeableClickerObject(float upgradeCost, Club club)
     {
@@ -31,6 +36,11 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
 
     public virtual void Update()
     {
+        if (TimeUntilIncome > 0)
+        {
+            TimeUntilIncome -= Time.deltaTime;
+            UpdateFillImage();
+        }
         UpdateText();
     }
 
@@ -38,10 +48,10 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (TimeUntilIncome > 0)
-        {
-            TimeUntilIncome -= 1f;
-        }
+        //if (TimeUntilIncome > 0)
+        //{
+        //    TimeUntilIncome -= 1f;
+        //}
     }
 
     public virtual void OnIncomeClick()
@@ -78,11 +88,29 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     protected void UpdateIncomeTime(float value)
     {
         TimeUntilIncome = Mathf.Round(mUpgradeCost * value);
+        fillTime = 0.0f;
+        fillImage.fillAmount = 0.0f;
     }
 
     public virtual void UpdateText()
     {
-        UpgradeText.text = $"Level: {UpgradeLevel} Cost:{UpgradeCost}";
-        IncomeText.text = $"Income: {Income} Time Until: {TimeUntilIncome}";
+        LevelText.text = $"LEVEL {UpgradeLevel}";
+        UpgradeText.text = UpgradeCost.ToString("C2");
+        IncomeText.text = Income.ToString("C2");
+        if (TimeUntilIncome > 59)
+        {
+            var time = new CountdownTime(TimeUntilIncome);
+            TimeText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", time.Hours, time.Minutes, time.Seconds);
+        }
+        else
+        {
+            TimeText.text = string.Format("00:00:{0:D2}", Mathf.RoundToInt(TimeUntilIncome));
+        }
+    }
+
+    private void UpdateFillImage()
+    {
+            var percent = 1.0f / TimeUntilIncome * Time.deltaTime/6;
+            fillImage.fillAmount += Mathf.Lerp(0, 1, percent);
     }
 }

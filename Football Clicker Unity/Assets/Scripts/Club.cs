@@ -9,7 +9,7 @@ public class Club : MonoBehaviour {
     public string City { get; private set; }
     public int YearFounded { get; private set; }
     public Vector3 TeamColour { get; private set; }
-    public float Money { get; private set; } = 100f;
+    public float Money { get; private set; } = 100000f;
     public long Value { get; private set; }
 
     public UnityEngine.UI.Text MoneyDisplay;
@@ -30,7 +30,7 @@ public class Club : MonoBehaviour {
 
     }
 
-    public void SetMoney(float money)
+    public void UpdateMoney(float money)
     {
         Money += money;
     }

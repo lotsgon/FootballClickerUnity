@@ -1,61 +1,93 @@
 ﻿using UnityEngine;
 
-public class UpgradeableClickerObject : MonoBehaviour {
+public abstract class UpgradeableClickerObject : MonoBehaviour
+{
 
-    public int UpgradeLevel { get; private set; } = 0;
-    public bool IsEnabled { get; private set; } = false;
+    public int UpgradeLevel { get; protected set; } = 0;
+    public bool IsEnabled { get; protected set; } = false;
     public float UpgradeCost { get { return mUpgradeCost; } private set { mUpgradeCost = value; } }
     public float TimeUntilIncome { get; private set; } = 0;
     public bool CanUpgrade { get; private set; } = true;
     public float Income { get; private set; } = 0f;
-    public UnityEngine.UI.Text Info;
+    public UnityEngine.UI.Text UpgradeText;
+    public UnityEngine.UI.Text IncomeText;
 
     [SerializeField]
-    private float mUpgradeCost = 0f;
+    protected float mUpgradeCost = 0f;
     [SerializeField]
-    private Club mClub;
+    protected Club mClub;
     private float mNewCost = 0f;
 
     public UpgradeableClickerObject(float upgradeCost, Club club)
     {
-        club = mClub;
-        upgradeCost = mUpgradeCost;
-        Income = Mathf.Round(mUpgradeCost * 1.15f);
-        TimeUntilIncome = Mathf.Round(mUpgradeCost * 0.03f);
+        mClub = club;
+        mUpgradeCost = upgradeCost;
+        UpdateUpgradeIncome(0.0f, 0.0f);
     }
 
-	// Use this for initialization
-	void Start () {
-        Income = Mathf.Round(mUpgradeCost * 0.05f);
+    // Use this for initialization
+    public virtual void Start()
+    {
+        UpdateUpgradeIncome(0.0f, 0.0f);
     }
 
     // Update is called once per frame
 
-    void Update()
+    public virtual void Update()
     {
-        Info.text = $"Cost:{UpgradeCost} Time Until: {TimeUntilIncome}";   
+        UpdateText();
     }
 
     // Update is called once per second
-    void FixedUpdate () {
+    void FixedUpdate()
+    {
 
         if (TimeUntilIncome > 0)
         {
             TimeUntilIncome -= 1f;
-            //mClub.SetMoney(Income);
-            //TimeUntilIncome = Mathf.Round(mUpgradeCost * 0.03f);
         }
-	}
+    }
 
-    public void OnClick()
+    public virtual void OnIncomeClick()
     {
-        if (TimeUntilIncome <= 0)
+        if (UpgradeLevel > 0 && TimeUntilIncome <= 0 && IsEnabled)
         {
-            mClub.SetMoney(-mUpgradeCost);
-            mUpgradeCost = Mathf.Round(mUpgradeCost * 1.15f);
-            mNewCost = Mathf.Pow(mUpgradeCost, mNewCost = mUpgradeCost);
-            Income = Mathf.Round(mUpgradeCost * 0.05f);
-            TimeUntilIncome = Mathf.Round(mUpgradeCost * 0.03f);
+            mClub.UpdateMoney(Income);
+            UpdateIncomeTime(0.003f);
         }
+    }
+
+    public virtual void OnUpgradeClick()
+    {
+        if (IsEnabled)
+        {
+            mClub.UpdateMoney(-mUpgradeCost);
+            UpdateUpgradeCost(1.15f);
+            UpdateUpgradeIncome(0.05f, 0.003f);
+            UpgradeLevel += 1;
+        }
+    }
+
+    protected void UpdateUpgradeCost(float upgradeValue)
+    {
+        mUpgradeCost = Mathf.Round(mUpgradeCost * upgradeValue);
+        mNewCost = Mathf.Pow(mUpgradeCost, mNewCost = mUpgradeCost);
+    }
+
+    protected void UpdateUpgradeIncome(float incomeValue, float timeValue)
+    {
+        Income = Mathf.Round(mUpgradeCost * incomeValue);
+        UpdateIncomeTime(timeValue);
+    }
+
+    protected void UpdateIncomeTime(float value)
+    {
+        TimeUntilIncome = Mathf.Round(mUpgradeCost * value);
+    }
+
+    public virtual void UpdateText()
+    {
+        UpgradeText.text = $"Level: {UpgradeLevel} Cost:{UpgradeCost}";
+        IncomeText.text = $"Income: {Income} Time Until: {TimeUntilIncome}";
     }
 }

@@ -847,9 +847,10 @@ MonoBehaviour:
   TimeText: {fileID: 114955392948805292}
   fillImage: {fileID: 114061753102942804}
   mUpgradeCost: 1000
-  mClub: {fileID: 0}
+  mClub: {fileID: 114112153413502932, guid: ac080a451f1bae74d994b7ddf47378c7, type: 2}
   mPosition: GK
-  mTeamManager: {fileID: 0}
+  mTeamManager: {fileID: 114082820893103162, guid: 57bde9df18ff74849bd32daf58924b51,
+    type: 2}
 --- !u!222 &222115676512055128
 CanvasRenderer:
   m_ObjectHideFlags: 1

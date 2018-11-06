@@ -26,6 +26,31 @@ public class TeamManager : MonoBehaviour
     // Update is called once per second
     public void FixedUpdate()
     {
+    }
+
+    // Update is called once per frame
+    public virtual void Update()
+    {
+        CheckFullSquad();
+        UpdateText();
+    }
+
+    public virtual void UpdateText()
+    {
+        PurchaseText.text = $"Purchase: {mPurchaseCost}";
+    }
+
+    public void PurchaseClick()
+    {
+        if (mIsEnabled)
+        {
+            mIsEnabled = false;
+            mClub.UpdateMoney(-mPurchaseCost);
+        }
+    }
+
+    private void CheckFullSquad()
+    {
         if (!mFullSquad)
         {
             var i = 0;
@@ -44,33 +69,13 @@ public class TeamManager : MonoBehaviour
             }
         }
 
-            mFullSquad = true;
-            foreach (SquadPlayer player in mSquadPlayers)
-            {
-                if (player.TimeUntilIncome <= 0)
-                {
-                    player.OnIncomeClick();
-                }
-            }
-    }
-
-    // Update is called once per frame
-    public virtual void Update()
-    {
-        UpdateText();
-    }
-
-    public virtual void UpdateText()
-    {
-        PurchaseText.text = $"Purchase: {mPurchaseCost}";
-    }
-
-    public void PurchaseClick()
-    {
-        if (mIsEnabled)
+        mFullSquad = true;
+        foreach (SquadPlayer player in mSquadPlayers)
         {
-            mIsEnabled = false;
-            mClub.UpdateMoney(-mPurchaseCost);
+            if (player.TimeUntilIncome <= 0)
+            {
+                player.OnIncomeClick();
+            }
         }
     }
 }

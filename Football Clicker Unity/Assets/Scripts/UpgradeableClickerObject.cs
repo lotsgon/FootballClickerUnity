@@ -7,7 +7,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     public int UpgradeLevel { get; protected set; } = 0;
     public bool IsEnabled { get; protected set; } = false;
     public float UpgradeCost { get { return mUpgradeCost; } private set { mUpgradeCost = value; } }
-    public float TimeUntilIncome { get; private set; } = 0;
+    public float TimeUntilIncome { get { return mTimeUntilIncome; } private set { mTimeUntilIncome = value; } }
     public bool CanUpgrade { get; private set; } = true;
     public float Income { get; private set; } = 0f;
     public Text UpgradeText;
@@ -17,20 +17,31 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     public Image fillImage;
 
     [SerializeField]
-    protected float mUpgradeCost = 0f;
+    protected float mInitialCost = 0.0f;
+    [SerializeField]
+    protected float mUpgradeCoefficient = 0.0f;
     [SerializeField]
     protected Club mClub;
-    private float fillTime;
 
-    public UpgradeableClickerObject(float upgradeCost, Club club)
+    protected float mUpgradeCost = 0.0f;
+    protected float mTimeUntilIncome = 0.0f;
+    [SerializeField]
+    protected float mInitialTimeUntilIncome = 0.0f;
+
+    public UpgradeableClickerObject(float upgradeCost, Club club, float upgradeCoefficient)
     {
         mClub = club;
-        mUpgradeCost = upgradeCost;
+        mUpgradeCoefficient = upgradeCoefficient;
+        UpdateUpgradeCost();
         UpdateUpgradeIncome(0.0f, 0.0f);
     }
 
     // Use this for initialization
-    public abstract void Start();
+    public virtual void Start()
+    {
+        UpdateUpgradeCost();
+    }
+
 
     // Update is called once per frame
 
@@ -59,7 +70,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
         if (UpgradeLevel > 0 && TimeUntilIncome <= 0 && IsEnabled)
         {
             mClub.UpdateMoney(Income);
-            UpdateIncomeTime(0.003f);
+            UpdateIncomeTime(0.002f);
         }
     }
 
@@ -68,27 +79,26 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
         if (IsEnabled)
         {
             mClub.UpdateMoney(-mUpgradeCost);
-            UpdateUpgradeCost(1.15f);
-            UpdateUpgradeIncome(0.05f, 0.003f);
+            UpdateUpgradeIncome(2.25f, 0.002f);
             UpgradeLevel += 1;
+            UpdateUpgradeCost();
         }
     }
 
-    protected void UpdateUpgradeCost(float upgradeValue)
+    protected void UpdateUpgradeCost()
     {
-        mUpgradeCost = Mathf.Round(mUpgradeCost * upgradeValue);
+        mUpgradeCost = Mathf.Round(mInitialCost * Mathf.Pow(mUpgradeCoefficient, UpgradeLevel - 1));
     }
 
     protected void UpdateUpgradeIncome(float incomeValue, float timeValue)
     {
-        Income = Mathf.Round(mUpgradeCost * incomeValue);
+        Income = Mathf.Round(mUpgradeCost / incomeValue);
         UpdateIncomeTime(timeValue);
     }
 
     protected void UpdateIncomeTime(float value)
     {
-        TimeUntilIncome = Mathf.Round(mUpgradeCost * value);
-        fillTime = 0.0f;
+        TimeUntilIncome = mInitialTimeUntilIncome;
         fillImage.fillAmount = 0.0f;
     }
 
@@ -99,7 +109,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
         IncomeText.text = Income.ToString("C2");
         if (TimeUntilIncome > 59)
         {
-            var time = new CountdownTime(TimeUntilIncome);
+            var time = new CountdownTime(Mathf.Round(TimeUntilIncome));
             TimeText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", time.Hours, time.Minutes, time.Seconds);
         }
         else
@@ -110,7 +120,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
 
     private void UpdateFillImage()
     {
-            var percent = 1.0f / TimeUntilIncome * Time.deltaTime/6;
-            fillImage.fillAmount += Mathf.Lerp(0, 1, percent);
+        var percent = (0.5f / (TimeUntilIncome)) * Time.deltaTime;
+        fillImage.fillAmount += Mathf.Lerp(0, 1, percent);
     }
 }

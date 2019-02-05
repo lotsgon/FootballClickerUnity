@@ -2,11 +2,15 @@
 
 public class AutomatedManagerObject : MonoBehaviour {
 
-    public UnityEngine.UI.Text PurchaseText;
+    [SerializeField]
+    protected UnityEngine.UI.Text PurchaseText;
+    [SerializeField]
+    protected UnityEngine.UI.Image PurchaseButton;
 
     [SerializeField]
     protected int mUnlockLevel;
-    protected bool mIsEnabled = true;
+    protected bool mIsEnabled = false;
+    protected bool mIsOwned = false;
     [SerializeField]
     protected UpgradeableClickerObject mObjectToManage;
     [SerializeField]
@@ -16,27 +20,30 @@ public class AutomatedManagerObject : MonoBehaviour {
 
     // Use this for initialization
     public virtual void Start () {
-        mPurchaseCost = mObjectToManage.UpgradeCost * 5.15f;
-	}
+        PurchaseText.text = "Purchase";
+    }
 
     // Update is called once per frame
     public virtual void Update()
     {
-        UpdateText();
+        if(!mIsOwned && !mIsEnabled && mObjectToManage.UpgradeLevel >= mUnlockLevel)
+        {
+            mPurchaseCost = mObjectToManage.UpgradeCost * 5.15f;
+            PurchaseText.text = $"Purchase: {mPurchaseCost}";
+            mIsEnabled = true;
+        }
+
+        if (mIsOwned && mObjectToManage.TimeUntilIncome <= 0)
+        {
+            mObjectToManage.OnIncomeClick();
+        }
+
     }
 
     // Update is called once per second
     public virtual void FixedUpdate () {
-		if(!mIsEnabled && mObjectToManage.TimeUntilIncome <= 0)
-        {
-            mObjectToManage.OnIncomeClick();
-        }
+		
 	}
-
-    public virtual void UpdateText()
-    {
-        PurchaseText.text = $"Purchase: {mPurchaseCost}";
-    }
 
     public void PurchaseClick()
     {
@@ -44,6 +51,9 @@ public class AutomatedManagerObject : MonoBehaviour {
         {
             mIsEnabled = false;
             mClub.UpdateMoney(-mPurchaseCost);
+            PurchaseText.text = "Owned";
+            PurchaseButton.color = Color.red;
+            mIsOwned = true;
         }
     }
 }

@@ -37,10 +37,6 @@ public class SquadPlayer : UpgradeableClickerObject {
             mUpgradeCost = mUpgradeCost * mUpgradeCoefficient;
             UpdateUpgradeIncome(0.0f, 0.0f);
             UpgradeLevel = 0;
-            if(mTeamManager != null)
-            {
-                mTeamManager.mFullSquad = false;
-            }
         }
     }
 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 using UnityEngine.UI;
 
 public abstract class UpgradeableClickerObject : MonoBehaviour
@@ -87,12 +88,12 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
 
     protected void UpdateUpgradeCost()
     {
-        mUpgradeCost = Mathf.Round(mInitialCost * Mathf.Pow(mUpgradeCoefficient, UpgradeLevel - 1));
+        mUpgradeCost = mInitialCost * Mathf.Pow(mUpgradeCoefficient, UpgradeLevel - 1);
     }
 
     protected void UpdateUpgradeIncome(float incomeValue, float timeValue)
     {
-        Income = Mathf.Round(mUpgradeCost / incomeValue);
+        Income = mUpgradeCost / incomeValue;
         UpdateIncomeTime(timeValue);
     }
 
@@ -105,8 +106,8 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     public virtual void UpdateText()
     {
         LevelText.text = $"LEVEL {UpgradeLevel}";
-        UpgradeText.text = UpgradeCost.ToString("C2");
-        IncomeText.text = Income.ToString("C2");
+        UpgradeText.text = CurrencyResources.CurrencyToString(UpgradeCost, true);
+        IncomeText.text = CurrencyResources.CurrencyToString(Income, true);
         if (TimeUntilIncome > 59)
         {
             var time = new CountdownTime(Mathf.Round(TimeUntilIncome));

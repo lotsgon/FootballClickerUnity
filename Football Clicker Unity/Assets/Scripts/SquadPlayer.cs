@@ -34,9 +34,9 @@ public class SquadPlayer : UpgradeableClickerObject {
         if (UpgradeLevel > 0)
         {
             mClub.UpdateMoney(SaleValue);
-            mUpgradeCost = mUpgradeCost * mUpgradeCoefficient;
             UpdateUpgradeIncome(0.0f, 0.0f);
             UpgradeLevel = 0;
+            base.UpdateUpgradeCost();
         }
     }
 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 
 public class AutomatedManagerObject : MonoBehaviour {
 
@@ -28,8 +29,8 @@ public class AutomatedManagerObject : MonoBehaviour {
     {
         if(!mIsOwned && !mIsEnabled && mObjectToManage.UpgradeLevel >= mUnlockLevel)
         {
-            mPurchaseCost = mObjectToManage.UpgradeCost * 5.15f;
-            PurchaseText.text = $"Purchase: {mPurchaseCost}";
+            mPurchaseCost = Mathf.Round(mObjectToManage.UpgradeCost * 5.15f);
+            PurchaseText.text = $"Purchase: {CurrencyResources.CurrencyToString(mPurchaseCost, true)}";
             mIsEnabled = true;
         }
 

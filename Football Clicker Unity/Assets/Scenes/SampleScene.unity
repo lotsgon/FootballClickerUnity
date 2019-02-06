@@ -5287,7 +5287,7 @@ Prefab:
     - target: {fileID: 114839183379851698, guid: 4ec15bf8b8f40554bb674e69a39583fb,
         type: 2}
       propertyPath: mInitialCost
-      value: 3.0958682e+11
+      value: 3.095868e+14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ec15bf8b8f40554bb674e69a39583fb, type: 2}

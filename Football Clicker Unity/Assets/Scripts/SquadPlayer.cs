@@ -10,7 +10,7 @@ public class SquadPlayer : UpgradeableClickerObject {
     [SerializeField]
     private TeamManager mTeamManager;
 
-    public SquadPlayer(float upgradeCost, Club club, string postition, TeamManager manager) : base(upgradeCost, club)
+    public SquadPlayer(float upgradeCost, Club club, float upgradeCoefficient, string postition, TeamManager manager) : base(upgradeCost, club, upgradeCoefficient)
     {
         mPosition = postition;
         SaleValue = upgradeCost / 2;
@@ -21,6 +21,7 @@ public class SquadPlayer : UpgradeableClickerObject {
     public override void Start()
     {
         base.IsEnabled = true;
+        base.Start();
     }
 
     // Update is called once per frame
@@ -33,13 +34,9 @@ public class SquadPlayer : UpgradeableClickerObject {
         if (UpgradeLevel > 0)
         {
             mClub.UpdateMoney(SaleValue);
-            mUpgradeCost = mUpgradeCost * 1.05f;
             UpdateUpgradeIncome(0.0f, 0.0f);
             UpgradeLevel = 0;
-            if(mTeamManager != null)
-            {
-                mTeamManager.mFullSquad = false;
-            }
+            base.UpdateUpgradeCost();
         }
     }
 

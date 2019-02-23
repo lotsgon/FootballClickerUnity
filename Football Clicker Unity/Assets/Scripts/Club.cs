@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 
 public class Club : MonoBehaviour {
 
@@ -22,7 +23,7 @@ public class Club : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        MoneyDisplay.text = Money.ToString("C2");
+        MoneyDisplay.text = CurrencyResources.CurrencyToString(Money);
     }
 
     // Update is called once per second

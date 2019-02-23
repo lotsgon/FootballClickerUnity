@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Scripts;
+using System.Collections.Generic;
 
 using UnityEngine;
 
@@ -37,7 +38,7 @@ public class TeamManager : MonoBehaviour
 
     public virtual void UpdateText()
     {
-        PurchaseText.text = $"Purchase: {mPurchaseCost}";
+        PurchaseText.text = $"Purchase: {CurrencyResources.CurrencyToString(mPurchaseCost)}";
     }
 
     public void PurchaseClick()

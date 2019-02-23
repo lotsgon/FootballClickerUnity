@@ -5,12 +5,12 @@ public class ClubRoomUpgrade : UpgradeableClickerObject
 {
 
     [SerializeField]
-    private string mItemName;
+    private readonly string mItemName;
     [SerializeField]
-    private int mUpgradeUnlockLevel;
+    private readonly int mUpgradeUnlockLevel;
     private IEnumerable<SquadPlayer> mSquadPlayers;
 
-    public ClubRoomUpgrade(float upgradeCost, Club club) : base(upgradeCost, club)
+    public ClubRoomUpgrade(float upgradeCost, Club club, float upgradeCoefficient) : base(upgradeCost, club, upgradeCoefficient)
     {
         mSquadPlayers = FindObjectsOfType<SquadPlayer>();
     }
@@ -19,6 +19,8 @@ public class ClubRoomUpgrade : UpgradeableClickerObject
     public override void Start()
     {
         mSquadPlayers = FindObjectsOfType<SquadPlayer>();
+        Application.targetFrameRate = 30;
+        base.Start();
     }
 
     public override void OnUpgradeClick()

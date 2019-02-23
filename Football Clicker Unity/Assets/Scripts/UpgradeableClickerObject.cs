@@ -30,6 +30,8 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     [SerializeField]
     protected float mInitialTimeUntilIncome = 0.0f;
 
+    private float activeTime = 0.0f;
+
     public UpgradeableClickerObject(float upgradeCost, Club club, float upgradeCoefficient)
     {
         mClub = club;
@@ -83,9 +85,9 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
         if (IsEnabled)
         {
             mClub.UpdateMoney(-mUpgradeCost);
-            UpdateUpgradeIncome(2.25f, 0.002f);
             UpgradeLevel += 1;
             UpdateFillLevelImage();
+            UpdateUpgradeIncome(2.25f, 0.002f);
             UpdateUpgradeCost();
         }
     }
@@ -104,6 +106,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     protected void UpdateIncomeTime(float value)
     {
         TimeUntilIncome = mInitialTimeUntilIncome;
+        activeTime = 0.0f;
         fillImage.fillAmount = 0.0f;
     }
 
@@ -125,13 +128,14 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
 
     private void UpdateFillImage()
     {
-        var percent = (0.5f / (TimeUntilIncome)) * Time.deltaTime;
-        fillImage.fillAmount += Mathf.Lerp(0, 1, percent);
+            activeTime += Time.deltaTime;
+            var percent = activeTime / mInitialTimeUntilIncome;
+            fillImage.fillAmount = Mathf.Lerp(0.0f, 1.0f, percent);
     }
 
     private void UpdateLevelMultiplyer()
     {
-        mTimeUntilIncome *= 2;
+        mInitialTimeUntilIncome = mTimeUntilIncome / 1.5f;
     }
 
     private void UpdateFillLevelImage()

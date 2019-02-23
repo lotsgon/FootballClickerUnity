@@ -1795,6 +1795,10 @@ Prefab:
       propertyPath: mInitialTimeUntilIncome
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 1054849505792426, guid: 0e5d2285e5d88ac428bfa00f280a06a8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e5d2285e5d88ac428bfa00f280a06a8, type: 2}
   m_IsPrefabAsset: 0
@@ -2820,6 +2824,38 @@ Prefab:
       propertyPath: mInitialCost
       value: 4000
       objectReference: {fileID: 0}
+    - target: {fileID: 224287037789827702, guid: d74eb1ccbf918ed44938e7ab06338a03,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987987350056532, guid: d74eb1ccbf918ed44938e7ab06338a03,
+        type: 2}
+      propertyPath: fillLevelImage
+      value: 
+      objectReference: {fileID: 988203721}
+    - target: {fileID: 114923706570202726, guid: d74eb1ccbf918ed44938e7ab06338a03,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a8056c83320bc2b44adc2a0bf73052dc,
+        type: 3}
+    - target: {fileID: 114061753102942804, guid: d74eb1ccbf918ed44938e7ab06338a03,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 23b0cc4dbdc1b504cb973bdfd8a893f8,
+        type: 3}
+    - target: {fileID: 224744193827534370, guid: d74eb1ccbf918ed44938e7ab06338a03,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.9875
+      objectReference: {fileID: 0}
+    - target: {fileID: 224744193827534370, guid: d74eb1ccbf918ed44938e7ab06338a03,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d74eb1ccbf918ed44938e7ab06338a03, type: 2}
   m_IsPrefabAsset: 0
@@ -3203,7 +3239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &459288073
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4081,6 +4117,10 @@ Prefab:
       propertyPath: mInitialTimeUntilIncome
       value: 36864
       objectReference: {fileID: 0}
+    - target: {fileID: 1057050501073196, guid: 4ec15bf8b8f40554bb674e69a39583fb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ec15bf8b8f40554bb674e69a39583fb, type: 2}
   m_IsPrefabAsset: 0
@@ -4214,6 +4254,7 @@ MonoBehaviour:
   IncomeText: {fileID: 1486391}
   TimeText: {fileID: 329103838}
   fillImage: {fileID: 585631578}
+  fillLevelImage: {fileID: 0}
   mInitialCost: 0
   mUpgradeCoefficient: 0
   mClub: {fileID: 1957345152}
@@ -4690,6 +4731,10 @@ Prefab:
       propertyPath: mInitialTimeUntilIncome
       value: 96
       objectReference: {fileID: 0}
+    - target: {fileID: 1333327898794156, guid: 296e3ba6b3c00384eb75919a656ddd48, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 296e3ba6b3c00384eb75919a656ddd48, type: 2}
   m_IsPrefabAsset: 0
@@ -5042,7 +5087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &632835827
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5288,6 +5333,10 @@ Prefab:
         type: 2}
       propertyPath: mInitialCost
       value: 3.095868e+14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1057050501073196, guid: 4ec15bf8b8f40554bb674e69a39583fb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ec15bf8b8f40554bb674e69a39583fb, type: 2}
@@ -5589,6 +5638,7 @@ MonoBehaviour:
   IncomeText: {fileID: 1710992116}
   TimeText: {fileID: 1732324789}
   fillImage: {fileID: 204767185}
+  fillLevelImage: {fileID: 0}
   mInitialCost: 0
   mUpgradeCoefficient: 0
   mClub: {fileID: 1957345152}
@@ -8092,6 +8142,79 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1119988297}
   m_Script: {fileID: 11500000, guid: 684d183a7c095174cb2eb052ba4d0824, type: 3}
+--- !u!1 &988203720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1322551971555726, guid: d74eb1ccbf918ed44938e7ab06338a03,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988203723}
+  - component: {fileID: 988203722}
+  - component: {fileID: 988203721}
+  m_Layer: 5
+  m_Name: FillLevelImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &988203721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114923706570202726, guid: d74eb1ccbf918ed44938e7ab06338a03,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 988203720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.15294118, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: e66d53958ac90824a8c7dae841e81c39, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &988203722
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 222511037097941460, guid: d74eb1ccbf918ed44938e7ab06338a03,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 988203720}
+  m_CullTransparentMesh: 0
+--- !u!224 &988203723
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 224445552875534110, guid: d74eb1ccbf918ed44938e7ab06338a03,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 988203720}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.938125, y: 0.71249, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1514498696}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.2}
+  m_SizeDelta: {x: 246, y: 48.26}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1004425120
 GameObject:
   m_ObjectHideFlags: 0
@@ -9575,6 +9698,10 @@ Prefab:
       propertyPath: mUpgradeCoefficient
       value: 1.15
       objectReference: {fileID: 0}
+    - target: {fileID: 1688029289748760, guid: f9a5741a6871bca4f9d3830416e0c819, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9a5741a6871bca4f9d3830416e0c819, type: 2}
   m_IsPrefabAsset: 0
@@ -9728,6 +9855,10 @@ Prefab:
         type: 2}
       propertyPath: mInitialCost
       value: 1.7915904e+11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054849505792426, guid: 0e5d2285e5d88ac428bfa00f280a06a8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e5d2285e5d88ac428bfa00f280a06a8, type: 2}
@@ -11177,6 +11308,7 @@ MonoBehaviour:
   IncomeText: {fileID: 1049401104}
   TimeText: {fileID: 787992293}
   fillImage: {fileID: 357118703}
+  fillLevelImage: {fileID: 0}
   mInitialCost: 0
   mUpgradeCoefficient: 0
   mClub: {fileID: 1957345152}
@@ -11401,6 +11533,10 @@ Prefab:
         type: 2}
       propertyPath: mInitialCost
       value: 8640000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820280616968552, guid: 53e74f3d12db70b4bae06bf1851cd99d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53e74f3d12db70b4bae06bf1851cd99d, type: 2}
@@ -12059,6 +12195,10 @@ Prefab:
       propertyPath: mUpgradeCoefficient
       value: 1.16
       objectReference: {fileID: 0}
+    - target: {fileID: 1820280616968552, guid: 53e74f3d12db70b4bae06bf1851cd99d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53e74f3d12db70b4bae06bf1851cd99d, type: 2}
   m_IsPrefabAsset: 0
@@ -12184,9 +12324,18 @@ Prefab:
       propertyPath: mUpgradeCoefficient
       value: 1.11
       objectReference: {fileID: 0}
+    - target: {fileID: 1793745760457478, guid: 4cd31d31d0f6463428676d44c84478aa, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cd31d31d0f6463428676d44c84478aa, type: 2}
   m_IsPrefabAsset: 0
+--- !u!224 &1514498696 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224445552875534110, guid: d74eb1ccbf918ed44938e7ab06338a03,
+    type: 2}
+  m_PrefabInternal: {fileID: 363414330}
 --- !u!1 &1540483438
 GameObject:
   m_ObjectHideFlags: 0
@@ -13720,6 +13869,7 @@ MonoBehaviour:
   IncomeText: {fileID: 1777075195}
   TimeText: {fileID: 1467609031}
   fillImage: {fileID: 134272957}
+  fillLevelImage: {fileID: 0}
   mInitialCost: 0
   mUpgradeCoefficient: 0
   mClub: {fileID: 1957345152}
@@ -14005,6 +14155,10 @@ Prefab:
         type: 2}
       propertyPath: mInitialCost
       value: 2.1499085e+12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1057050501073196, guid: 4ec15bf8b8f40554bb674e69a39583fb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ec15bf8b8f40554bb674e69a39583fb, type: 2}
@@ -15351,6 +15505,7 @@ MonoBehaviour:
   IncomeText: {fileID: 828970680}
   TimeText: {fileID: 98220736}
   fillImage: {fileID: 2102257103}
+  fillLevelImage: {fileID: 0}
   mInitialCost: 0
   mUpgradeCoefficient: 0
   mClub: {fileID: 1957345152}

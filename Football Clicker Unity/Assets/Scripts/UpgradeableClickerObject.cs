@@ -16,6 +16,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     public Text IncomeText;
     public Text TimeText;
     public Image fillImage;
+    public Image fillLevelImage;
 
     [SerializeField]
     protected float mInitialCost = 0.0f;
@@ -41,6 +42,8 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     public virtual void Start()
     {
         UpdateUpgradeCost();
+        fillLevelImage.fillAmount = 0.0f;
+        fillImage.fillAmount = 0.0f;
     }
 
 
@@ -82,6 +85,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
             mClub.UpdateMoney(-mUpgradeCost);
             UpdateUpgradeIncome(2.25f, 0.002f);
             UpgradeLevel += 1;
+            UpdateFillLevelImage();
             UpdateUpgradeCost();
         }
     }
@@ -123,5 +127,28 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     {
         var percent = (0.5f / (TimeUntilIncome)) * Time.deltaTime;
         fillImage.fillAmount += Mathf.Lerp(0, 1, percent);
+    }
+
+    private void UpdateLevelMultiplyer()
+    {
+        mTimeUntilIncome *= 2;
+    }
+
+    private void UpdateFillLevelImage()
+    {
+        if (UpgradeLevel % 25 == 0)
+        {
+            fillLevelImage.fillAmount += Mathf.Lerp(0, 1, 1.0f / 25.0f);
+            UpdateLevelMultiplyer();
+        }
+        else if (UpgradeLevel % 25 == 1)
+        {
+            fillLevelImage.fillAmount = 0.0f;
+            fillLevelImage.fillAmount += Mathf.Lerp(0, 1, 1.0f / 25.0f);
+        }
+        else
+        {
+            fillLevelImage.fillAmount += Mathf.Lerp(0, 1, 1.0f / 25.0f);
+        }
     }
 }

@@ -8,13 +8,11 @@ public class SquadPlayer : UpgradeableClickerObject {
     [SerializeField]
     private string mPosition;
     [SerializeField]
-    private TeamManager mTeamManager;
 
-    public SquadPlayer(float upgradeCost, Club club, float upgradeCoefficient, string postition, TeamManager manager) : base(upgradeCost, club, upgradeCoefficient)
+    public SquadPlayer(float upgradeCost, Club club, float upgradeCoefficient, string postition) : base(upgradeCost, club, upgradeCoefficient)
     {
         mPosition = postition;
         SaleValue = upgradeCost / 2;
-        mTeamManager = manager;
     }
 
     // Use this for initialization
@@ -34,7 +32,7 @@ public class SquadPlayer : UpgradeableClickerObject {
         if (UpgradeLevel > 0)
         {
             mClub.UpdateMoney(SaleValue);
-            UpdateUpgradeIncome(0.0f, 0.0f);
+            UpdateUpgradeIncome(0.0f);
             UpgradeLevel = 0;
             base.UpdateUpgradeCost();
         }

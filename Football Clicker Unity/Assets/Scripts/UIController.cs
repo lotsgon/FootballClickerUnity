@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Analytics;
 
 public class UIController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class UIController : MonoBehaviour
     public GameObject SquadMenu;
     public Canvas GameMenu;
     public Canvas MainGame;
+    public Canvas IAPMenu;
 
     private CanvasGroup ClubRoomCanvasGroup;
     private CanvasGroup StaffCanvasGroup;
@@ -33,18 +35,31 @@ public class UIController : MonoBehaviour
 
     public void ShowGameMenu()
     {
+        AnalyticsEvent.ScreenVisit(ScreenName.MainMenu);
         ToggleMainGame(false, 0);
         ToggleGameMenu(true);
+        ToggleIAPMenu(false);
     }
 
     public void ShowMainGame()
     {
+        AnalyticsEvent.ScreenVisit("MainGame");
         ToggleMainGame(true, 1);
+        ToggleIAPMenu(false);
+        ToggleGameMenu(false);
+    }
+
+    public void ShowIAPMenu()
+    {
+        AnalyticsEvent.StoreOpened(StoreType.Premium);
+        ToggleMainGame(false, 0);
+        ToggleIAPMenu(true);
         ToggleGameMenu(false);
     }
 
     public void ShowSquadMenu()
     {
+        AnalyticsEvent.ScreenVisit("SquadMenu");
         ToggleClubRoomMenu(false, 0);
         ToggleStaffMenu(false, 0);
         ToggleSquadMenu(true, 1);
@@ -53,6 +68,7 @@ public class UIController : MonoBehaviour
 
     public void ShowStaffMenu()
     {
+        AnalyticsEvent.ScreenVisit("StaffMenu");
         ToggleClubRoomMenu(false, 0);
         ToggleSquadMenu(false, 0);
         ToggleStaffMenu(true, 1);
@@ -61,6 +77,7 @@ public class UIController : MonoBehaviour
 
     public void ShowClubRoomMenu()
     {
+        AnalyticsEvent.ScreenVisit("UpgradeMenu");
         ToggleSquadMenu(false, 0);
         ToggleStaffMenu(false, 0);
         ToggleClubRoomMenu(true, 1);
@@ -70,6 +87,11 @@ public class UIController : MonoBehaviour
     private void ToggleGameMenu(bool boolean)
     {
         GameMenu.gameObject.SetActive(boolean);
+    }
+
+    private void ToggleIAPMenu(bool boolean)
+    {
+        IAPMenu.gameObject.SetActive(boolean);
     }
 
     private void ToggleMainGame(bool boolean, int alpha)

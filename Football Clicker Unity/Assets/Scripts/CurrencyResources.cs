@@ -28,9 +28,16 @@
 
             return v.ToString("£0.###");
         }
+
+        public static bool CanAfford(float clubMoney, float price)
+        {
+            if (price <= clubMoney)
+            {
+                return true;
+            }
+            return false;
+        }
     }
-
-
 }
 
 

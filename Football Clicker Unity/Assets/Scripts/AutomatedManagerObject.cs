@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class AutomatedManagerObject : MonoBehaviour {
 
@@ -48,8 +49,9 @@ public class AutomatedManagerObject : MonoBehaviour {
 
     public void PurchaseClick()
     {
-        if (mIsEnabled && mObjectToManage.UpgradeLevel > 0)
+        if (mIsEnabled && mObjectToManage.UpgradeLevel > 0 && CurrencyResources.CanAfford(mClub.Money, mPurchaseCost))
         {
+            AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "Manager", mPurchaseCost, "Manager");
             mIsEnabled = false;
             mClub.UpdateMoney(-mPurchaseCost);
             PurchaseText.text = "Owned";

@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.UI;
 
 public abstract class UpgradeableClickerObject : MonoBehaviour
@@ -30,6 +31,8 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     [SerializeField]
     protected float mInitialTimeUntilIncome = 0.0f;
 
+    private int mIncomeMultiplyer = 1;
+
     private float activeTime = 0.0f;
 
     public UpgradeableClickerObject(float upgradeCost, Club club, float upgradeCoefficient)
@@ -37,7 +40,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
         mClub = club;
         mUpgradeCoefficient = upgradeCoefficient;
         UpdateUpgradeCost();
-        UpdateUpgradeIncome(0.0f, 0.0f);
+        UpdateUpgradeIncome(0.0f);
     }
 
     // Use this for initialization
@@ -46,6 +49,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
         UpdateUpgradeCost();
         fillLevelImage.fillAmount = 0.0f;
         fillImage.fillAmount = 0.0f;
+        mIncomeMultiplyer = 1;
     }
 
 
@@ -75,19 +79,22 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     {
         if (UpgradeLevel > 0 && TimeUntilIncome <= 0 && IsEnabled)
         {
+            AnalyticsEvent.ItemAcquired(AcquisitionType.Soft, "Money", Income, "Income", mClub.Money);
             mClub.UpdateMoney(Income);
-            UpdateIncomeTime(0.002f);
+            UpdateIncomeTime();
         }
     }
 
     public virtual void OnUpgradeClick()
     {
-        if (IsEnabled)
+        if (IsEnabled && CurrencyResources.CanAfford(mClub.Money, mUpgradeCost))
         {
             mClub.UpdateMoney(-mUpgradeCost);
             UpgradeLevel += 1;
+            AnalyticsEvent.LevelUp(UpgradeLevel);
+            AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "Player", mUpgradeCost, "Player");
             UpdateFillLevelImage();
-            UpdateUpgradeIncome(2.25f, 0.002f);
+            UpdateUpgradeIncome(2.25f);
             UpdateUpgradeCost();
         }
     }
@@ -97,13 +104,19 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
         mUpgradeCost = mInitialCost * Mathf.Pow(mUpgradeCoefficient, UpgradeLevel - 1);
     }
 
-    protected void UpdateUpgradeIncome(float incomeValue, float timeValue)
+    protected void UpdateUpgradeIncome(float incomeValue)
     {
-        Income = mUpgradeCost / incomeValue;
-        UpdateIncomeTime(timeValue);
+        Income = (mUpgradeCost / incomeValue) * mIncomeMultiplyer;
+        UpdateIncomeTime();
     }
 
-    protected void UpdateIncomeTime(float value)
+    public void UpdateIncomeMultiplyer(int multiplyer)
+    {
+        mIncomeMultiplyer *= multiplyer;
+        UpdateUpgradeIncome(2.25f);
+    }
+
+    protected void UpdateIncomeTime()
     {
         TimeUntilIncome = mInitialTimeUntilIncome;
         activeTime = 0.0f;

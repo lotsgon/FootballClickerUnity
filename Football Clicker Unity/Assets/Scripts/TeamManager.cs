@@ -3,9 +3,19 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
+[System.Serializable]
+public class TeamManagerData
+{
+
+
+}
+
+
 public class TeamManager : MonoBehaviour
 {
     public UnityEngine.UI.Text PurchaseText;
+
+    private TeamManagerData teamManagerData;
 
     [SerializeField]
     protected int mUnlockLevel;
@@ -21,7 +31,6 @@ public class TeamManager : MonoBehaviour
     // Use this for initialization
     public void Start()
     {
-        mSquadPlayers = FindObjectsOfType<SquadPlayer>();
     }
 
     // Update is called once per second

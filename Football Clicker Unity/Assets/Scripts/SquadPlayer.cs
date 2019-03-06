@@ -1,15 +1,37 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using System;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.Analytics;
 
-public class SquadPlayer : UpgradeableClickerObject {
+[System.Serializable]
+public class SquadPlayerData
+{
+    public string position;
+    public float saleValue;
+    public UpgradeableClickerObjectData upgradeableClickerObjectData;
+
+    public SquadPlayerData(SquadPlayer player)
+    {
+        position = player.Position;
+        saleValue = player.SaleValue;
+        upgradeableClickerObjectData = new UpgradeableClickerObjectData(player);
+    }
+}
+
+public class SquadPlayer : UpgradeableClickerObject
+{
 
     public string Position { get { return mPosition; } set { mPosition = value; } }
     public float SaleValue { get; private set; }
 
     [SerializeField]
     private string mPosition;
-    [SerializeField]
+    private bool triedDataLoad = false;
 
-    public SquadPlayer(float upgradeCost, Club club, float upgradeCoefficient, string postition) : base(upgradeCost, club, upgradeCoefficient)
+    public SquadPlayer() : base() { }
+
+    public SquadPlayer(float upgradeCost, Club club, float upgradeCoefficient, string postition, float initalIncomeTime) : base(upgradeCost, club, upgradeCoefficient, initalIncomeTime)
     {
         mPosition = postition;
         SaleValue = upgradeCost / 2;
@@ -18,13 +40,20 @@ public class SquadPlayer : UpgradeableClickerObject {
     // Use this for initialization
     public override void Start()
     {
-        base.IsEnabled = true;
         base.Start();
     }
 
     // Update is called once per frame
-    public override void Update () {
+    public override void Update()
+    {
         base.Update();
+    }
+
+    public void SetSquadPlayerData(SquadPlayerData playerData)
+    {
+        Position = playerData.position;
+        SaleValue = playerData.saleValue;
+        SetUpgradeableClickerObjectData(playerData.upgradeableClickerObjectData);
     }
 
     public void OnSellClick()
@@ -38,9 +67,65 @@ public class SquadPlayer : UpgradeableClickerObject {
         }
     }
 
+    public override void OnIncomeClick()
+    {
+        if (UpgradeLevel > 0 && TimeUntilIncome <= 0 && IsEnabled)
+        {
+            AnalyticsEvent.ItemAcquired(AcquisitionType.Soft, "Income", Income, mPosition, mClub.Money);
+            mClub.UpdateMoney(Income);
+            UpdateIncomeTime();
+        }
+    }
+
     public override void OnUpgradeClick()
     {
-        base.OnUpgradeClick();
-        SaleValue = mUpgradeCost / 2;
+        if (CurrencyResources.CanAfford(mClub.Money, mUpgradeCost))
+        {
+            mClub.UpdateMoney(-mUpgradeCost);
+            UpgradeLevel += 1;
+            AnalyticsEvent.LevelUp(UpgradeLevel);
+            AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "PlayerUpgrade", mUpgradeCost, mPosition);
+            UpdateFillLevelImage();
+            UpdateUpgradeIncome(2.25f);
+            UpdateUpgradeCost();
+            SaleValue = mUpgradeCost / 2;
+            IsEnabled = true;
+        }
+    }
+
+    public void CalculateMoneyEarntWhileAway()
+    {
+        if (this.Income == 0)
+        { return; }
+
+        var manager = UnityEngine.Object.FindObjectsOfType<AutomatedManagerObject>().Where(x => x.Position == mPosition).FirstOrDefault();
+
+        if(manager == null || !manager.IsOwned)
+        {
+            return;
+        }
+
+        var saveTime = DateTime.FromFileTime(mClub.SaveTime);
+
+        TimeSpan timeGone = DateTime.Now - saveTime;
+
+        if (timeGone.TotalSeconds < 1)
+        { return; }
+
+        var timesCompleted = (int)(timeGone.TotalSeconds / mInitialTimeUntilIncome);
+
+        mTimeUntilIncome = (float)(timeGone.TotalSeconds % mInitialTimeUntilIncome);
+
+        mClub.UpdateMoney(timesCompleted * Income);
+    }
+
+    private void OnApplicationPause()
+    {
+        SaveLoadManager.SaveSquadPlayer(this);
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveLoadManager.SaveSquadPlayer(this);
     }
 }

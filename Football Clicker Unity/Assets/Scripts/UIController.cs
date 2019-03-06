@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.Analytics;
 
 public class UIController : MonoBehaviour
@@ -10,21 +12,25 @@ public class UIController : MonoBehaviour
     public Canvas GameMenu;
     public Canvas MainGame;
     public Canvas IAPMenu;
+    public Canvas WelcomeBackScreen;
 
-    private CanvasGroup ClubRoomCanvasGroup;
-    private CanvasGroup StaffCanvasGroup;
-    private CanvasGroup SquadCanvasGroup;
-    private CanvasGroup MainGameCanvasGroup;
+    public CanvasGroup ClubRoomCanvasGroup;
+    public CanvasGroup StaffCanvasGroup;
+    public CanvasGroup SquadCanvasGroup;
+    public CanvasGroup MainGameCanvasGroup;
+
+    [SerializeField]
+    private UnityEngine.UI.Text WelcomeBackIncomeText;
+    [SerializeField]
+    private UnityEngine.UI.Text WelcomeBackDoubleIncomeText;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
-        ClubRoomCanvasGroup = ClubRoomMenu.GetComponent<CanvasGroup>();
-        StaffCanvasGroup = StaffMenu.GetComponent<CanvasGroup>();
-        SquadCanvasGroup = SquadMenu.GetComponent<CanvasGroup>();
-        MainGameCanvasGroup = MainGame.GetComponent<CanvasGroup>();
+    }
 
-        ShowSquadMenu();
+    private void Start()
+    {
     }
 
     // Update is called once per frame
@@ -39,14 +45,36 @@ public class UIController : MonoBehaviour
         ToggleMainGame(false, 0);
         ToggleGameMenu(true);
         ToggleIAPMenu(false);
+        ToggleWelcomeBackScreen(false);
+    }
+
+    public void ShowWelcomeBackScreen(Club club)
+    {
+        AnalyticsEvent.ScreenVisit("WelcomeBack");
+        ToggleMainGame(false, 0);
+        ToggleGameMenu(false);
+        ToggleIAPMenu(false);
+        ToggleWelcomeBackScreen(true, club);
     }
 
     public void ShowMainGame()
     {
-        AnalyticsEvent.ScreenVisit("MainGame");
         ToggleMainGame(true, 1);
         ToggleIAPMenu(false);
         ToggleGameMenu(false);
+        ToggleWelcomeBackScreen(false);
+    }
+
+    public void ContinueToMainGame(Club club)
+    {
+        club.UpdateMoney(club.IncomeWhileAway);
+        ContinueToMainGame();
+    }
+
+    public void ContinueToMainGame()
+    {
+        ShowSquadMenu();
+        Time.timeScale = 1.0f;
     }
 
     public void ShowIAPMenu()
@@ -55,11 +83,11 @@ public class UIController : MonoBehaviour
         ToggleMainGame(false, 0);
         ToggleIAPMenu(true);
         ToggleGameMenu(false);
+        ToggleWelcomeBackScreen(false);
     }
 
     public void ShowSquadMenu()
     {
-        AnalyticsEvent.ScreenVisit("SquadMenu");
         ToggleClubRoomMenu(false, 0);
         ToggleStaffMenu(false, 0);
         ToggleSquadMenu(true, 1);
@@ -68,7 +96,6 @@ public class UIController : MonoBehaviour
 
     public void ShowStaffMenu()
     {
-        AnalyticsEvent.ScreenVisit("StaffMenu");
         ToggleClubRoomMenu(false, 0);
         ToggleSquadMenu(false, 0);
         ToggleStaffMenu(true, 1);
@@ -77,7 +104,6 @@ public class UIController : MonoBehaviour
 
     public void ShowClubRoomMenu()
     {
-        AnalyticsEvent.ScreenVisit("UpgradeMenu");
         ToggleSquadMenu(false, 0);
         ToggleStaffMenu(false, 0);
         ToggleClubRoomMenu(true, 1);
@@ -87,6 +113,19 @@ public class UIController : MonoBehaviour
     private void ToggleGameMenu(bool boolean)
     {
         GameMenu.gameObject.SetActive(boolean);
+    }
+
+    private void ToggleWelcomeBackScreen(bool boolean)
+    {
+        WelcomeBackScreen.gameObject.SetActive(boolean);
+    }
+
+    private void ToggleWelcomeBackScreen(bool boolean, Club club)
+    {
+        WelcomeBackIncomeText.text = CurrencyResources.CurrencyToString(club.IncomeWhileAway);
+        WelcomeBackDoubleIncomeText.text = CurrencyResources.CurrencyToString(club.IncomeWhileAway*2);
+        Time.timeScale = 0.0f;
+        WelcomeBackScreen.gameObject.SetActive(boolean);
     }
 
     private void ToggleIAPMenu(bool boolean)

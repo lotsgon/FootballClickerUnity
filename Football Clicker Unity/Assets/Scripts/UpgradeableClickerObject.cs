@@ -138,7 +138,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     {
         if (UpgradeLevel > 0 && TimeUntilIncome <= 0 && IsEnabled)
         {
-            AnalyticsEvent.ItemAcquired(AcquisitionType.Soft, "Income", Income, ItemID, mClub.Money);
+            //AnalyticsEvent.ItemAcquired(AcquisitionType.Soft, "Income", Income, ItemID, mClub.Money);
             mClub.UpdateMoney(Income);
             UpdateIncomeTime();
         }
@@ -151,7 +151,7 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
             mClub.UpdateMoney(-mUpgradeCost);
             UpgradeLevel += 1;
             AnalyticsEvent.LevelUp(UpgradeLevel);
-            AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "PlayerUpgrade", mUpgradeCost, ItemID);
+            //AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "PlayerUpgrade", mUpgradeCost, ItemID);
             UpdateFillLevelImage();
             UpdateUpgradeIncome(2.25f);
             UpdateUpgradeCost();

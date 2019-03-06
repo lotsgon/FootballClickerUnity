@@ -71,7 +71,7 @@ public class SquadPlayer : UpgradeableClickerObject
     {
         if (UpgradeLevel > 0 && TimeUntilIncome <= 0 && IsEnabled)
         {
-            AnalyticsEvent.ItemAcquired(AcquisitionType.Soft, "Income", Income, mPosition, mClub.Money);
+            //AnalyticsEvent.ItemAcquired(AcquisitionType.Soft, "Income", Income, mPosition, mClub.Money);
             mClub.UpdateMoney(Income);
             UpdateIncomeTime();
         }
@@ -84,7 +84,7 @@ public class SquadPlayer : UpgradeableClickerObject
             mClub.UpdateMoney(-mUpgradeCost);
             UpgradeLevel += 1;
             AnalyticsEvent.LevelUp(UpgradeLevel);
-            AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "PlayerUpgrade", mUpgradeCost, mPosition);
+            //AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "PlayerUpgrade", mUpgradeCost, mPosition);
             UpdateFillLevelImage();
             UpdateUpgradeIncome(2.25f);
             UpdateUpgradeCost();
@@ -93,16 +93,16 @@ public class SquadPlayer : UpgradeableClickerObject
         }
     }
 
-    public void CalculateMoneyEarntWhileAway()
+    public float CalculateMoneyEarntWhileAway()
     {
         if (this.Income == 0)
-        { return; }
+        { return 0.0f; }
 
         var manager = UnityEngine.Object.FindObjectsOfType<AutomatedManagerObject>().Where(x => x.Position == mPosition).FirstOrDefault();
 
         if(manager == null || !manager.IsOwned)
         {
-            return;
+            return 0.0f;
         }
 
         var saveTime = DateTime.FromFileTime(mClub.SaveTime);
@@ -110,13 +110,13 @@ public class SquadPlayer : UpgradeableClickerObject
         TimeSpan timeGone = DateTime.Now - saveTime;
 
         if (timeGone.TotalSeconds < 1)
-        { return; }
+        { return 0.0f; }
 
         var timesCompleted = (int)(timeGone.TotalSeconds / mInitialTimeUntilIncome);
 
         mTimeUntilIncome = (float)(timeGone.TotalSeconds % mInitialTimeUntilIncome);
 
-        mClub.UpdateMoney(timesCompleted * Income);
+        return timesCompleted * Income;
     }
 
     private void OnApplicationPause()

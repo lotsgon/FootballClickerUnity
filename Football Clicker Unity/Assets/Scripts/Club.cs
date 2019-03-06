@@ -30,9 +30,13 @@ public class Club : MonoBehaviour
     public int Tickets { get; private set; }
     public long Value { get; private set; }
     public long SaveTime { get; private set; }
+    public float IncomeWhileAway { get; private set; }
 
     public UnityEngine.UI.Text MoneyDisplay;
     public UnityEngine.UI.Text TicketsDisplay;
+
+    [SerializeField]
+    private UIController uIController;
 
     public Club()
     {
@@ -46,19 +50,32 @@ public class Club : MonoBehaviour
 
         var players = UnityEngine.Object.FindObjectsOfType<SquadPlayer>();
 
-        foreach(SquadPlayer player in players)
+        float incomeWhileAway = 0.0f;
+
+        foreach (SquadPlayer player in players)
         {
             SaveLoadManager.LoadAutomatedManager(player.Position);
             SaveLoadManager.LoadUpgrade(player.Position);
             SaveLoadManager.LoadSquadPlayer(player.Position);
-            player.CalculateMoneyEarntWhileAway();
+            incomeWhileAway += player.CalculateMoneyEarntWhileAway();
+        }
+
+        if (incomeWhileAway > 0)
+        {
+            IncomeWhileAway = incomeWhileAway;
+            uIController.ShowWelcomeBackScreen(this);
+        }
+        else
+        {
+            uIController.ContinueToMainGame(this);
         }
     }
 
     // Use this for initialization
-    void Start () {
-        
-	}
+    void Start()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -68,7 +85,8 @@ public class Club : MonoBehaviour
     }
 
     // Update is called once per second
-    void FixedUpdate () {
+    void FixedUpdate()
+    {
 
     }
 

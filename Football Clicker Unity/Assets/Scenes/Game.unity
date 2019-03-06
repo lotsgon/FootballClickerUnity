@@ -457,6 +457,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 50649202}
   m_CullTransparentMesh: 0
+--- !u!114 &59534364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114141692232976870, guid: 0b1e7ee6fce95d648a327d2edcb7687e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1171263584}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &59534365 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114658745998500156, guid: 0b1e7ee6fce95d648a327d2edcb7687e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1171263584}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &66391183
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +861,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 83943360}
   m_CullTransparentMesh: 0
+--- !u!114 &91227959 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114399964335750622, guid: 682457645b1236246bd4ca1edc79ac9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 899231574}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &91227960 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114949365484687638, guid: 682457645b1236246bd4ca1edc79ac9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 899231574}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &91651378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1337,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 103609880}
   m_CullTransparentMesh: 0
+--- !u!114 &106356212 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114612399621463776, guid: 69d5c7572d2413b4ca18fc2eb532a004,
+    type: 2}
+  m_PrefabInternal: {fileID: 2015804702}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &106356213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114130235392664550, guid: 69d5c7572d2413b4ca18fc2eb532a004,
+    type: 2}
+  m_PrefabInternal: {fileID: 2015804702}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &114294463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,6 +1775,16 @@ Prefab:
       propertyPath: mPosition
       value: GK
       objectReference: {fileID: 0}
+    - target: {fileID: 114397570562247838, guid: c651a93b84d955841b58503e15d2cbce,
+        type: 2}
+      propertyPath: PurchaseImage
+      value: 
+      objectReference: {fileID: 1089188925}
+    - target: {fileID: 114397570562247838, guid: c651a93b84d955841b58503e15d2cbce,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1089188924}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c651a93b84d955841b58503e15d2cbce, type: 2}
   m_IsPrefabAsset: 0
@@ -2191,6 +2237,18 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000030517578, y: -0.2}
   m_SizeDelta: {x: 246, y: 48.26}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &177817799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114389616677470162, guid: f632bd0377f49a74b895f79d06e5e9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1544957343}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &177817800 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114213545144535052, guid: f632bd0377f49a74b895f79d06e5e9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1544957343}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &180027106
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,6 +2717,16 @@ Prefab:
       propertyPath: mPosition
       value: CB1
       objectReference: {fileID: 0}
+    - target: {fileID: 114271527983424494, guid: c621033518aa6fe4a8289e391db31a81,
+        type: 2}
+      propertyPath: PurchaseImage
+      value: 
+      objectReference: {fileID: 573394971}
+    - target: {fileID: 114271527983424494, guid: c621033518aa6fe4a8289e391db31a81,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 573394970}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c621033518aa6fe4a8289e391db31a81, type: 2}
   m_IsPrefabAsset: 0
@@ -2812,6 +2880,16 @@ Prefab:
       propertyPath: mPosition
       value: CM1
       objectReference: {fileID: 0}
+    - target: {fileID: 114183607793769512, guid: 2bf49ac1fd35d144797625212e23671e,
+        type: 2}
+      propertyPath: PurchaseImage
+      value: 
+      objectReference: {fileID: 1943460752}
+    - target: {fileID: 114183607793769512, guid: 2bf49ac1fd35d144797625212e23671e,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1943460751}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bf49ac1fd35d144797625212e23671e, type: 2}
   m_IsPrefabAsset: 0
@@ -3064,6 +3142,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 247, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &263515975 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114258336305897184, guid: 8ed855c516de5ce48a86759f8a585c15,
+    type: 2}
+  m_PrefabInternal: {fileID: 1783564629}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &263515976 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114588473232584506, guid: 8ed855c516de5ce48a86759f8a585c15,
+    type: 2}
+  m_PrefabInternal: {fileID: 1783564629}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &266153056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4068,7 +4158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.40784317, g: 0.7843138, b: 0.227451, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4107,11 +4197,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1002274709}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -242}
+  m_AnchoredPosition: {x: 0, y: -288}
   m_SizeDelta: {x: -140, y: -865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &332055515
@@ -4298,6 +4388,26 @@ Prefab:
       propertyPath: mPosition
       value: RB
       objectReference: {fileID: 0}
+    - target: {fileID: 114311300576237808, guid: 431992bc85ea4554fbe44569873aa4b9,
+        type: 2}
+      propertyPath: TicketPurchaseButtonImage
+      value: 
+      objectReference: {fileID: 1093908045}
+    - target: {fileID: 114311300576237808, guid: 431992bc85ea4554fbe44569873aa4b9,
+        type: 2}
+      propertyPath: TicketPurchaseButton
+      value: 
+      objectReference: {fileID: 1093908046}
+    - target: {fileID: 114311300576237808, guid: 431992bc85ea4554fbe44569873aa4b9,
+        type: 2}
+      propertyPath: PurchaseButtonImage
+      value: 
+      objectReference: {fileID: 999714107}
+    - target: {fileID: 114311300576237808, guid: 431992bc85ea4554fbe44569873aa4b9,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 999714106}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 431992bc85ea4554fbe44569873aa4b9, type: 2}
   m_IsPrefabAsset: 0
@@ -4514,6 +4624,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &409549380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114255516292218134, guid: 0b1e7ee6fce95d648a327d2edcb7687e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1171263584}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &409549381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114850223665577640, guid: 0b1e7ee6fce95d648a327d2edcb7687e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1171263584}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &410781291 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114484638391534180, guid: 4122fb2ba08389b43a7f760a5cfeb66d,
+    type: 2}
+  m_PrefabInternal: {fileID: 720878145}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &410781292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114411324613563982, guid: 4122fb2ba08389b43a7f760a5cfeb66d,
+    type: 2}
+  m_PrefabInternal: {fileID: 720878145}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &414769410
 GameObject:
   m_ObjectHideFlags: 0
@@ -5289,6 +5423,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\xA34,054,045,544"
+--- !u!114 &506714445 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114989828959852860, guid: f5f4c79b6f80535418f449d4339d52b5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1458737269}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &506714446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114699591295738350, guid: f5f4c79b6f80535418f449d4339d52b5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1458737269}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &508317928
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,6 +6226,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: LEVEL 12
+--- !u!114 &573394970 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114325699080084498, guid: c621033518aa6fe4a8289e391db31a81,
+    type: 2}
+  m_PrefabInternal: {fileID: 195837671}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &573394971 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114037474296076176, guid: c621033518aa6fe4a8289e391db31a81,
+    type: 2}
+  m_PrefabInternal: {fileID: 195837671}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &575045554
 GameObject:
   m_ObjectHideFlags: 0
@@ -6956,6 +7114,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &654146915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114102972608815840, guid: 8ed855c516de5ce48a86759f8a585c15,
+    type: 2}
+  m_PrefabInternal: {fileID: 1783564629}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &654146916 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114065522593133942, guid: 8ed855c516de5ce48a86759f8a585c15,
+    type: 2}
+  m_PrefabInternal: {fileID: 1783564629}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &661480822
 GameObject:
   m_ObjectHideFlags: 0
@@ -7386,81 +7556,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 691468506}
   m_CullTransparentMesh: 0
---- !u!1 &693195968
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 693195969}
-  - component: {fileID: 693195971}
-  - component: {fileID: 693195970}
-  m_Layer: 5
-  m_Name: Text (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &693195969
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 693195968}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1002274709}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20}
-  m_SizeDelta: {x: -140, y: -865}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &693195970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 693195968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 62
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 73
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: WATCH AN AD
---- !u!222 &693195971
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 693195968}
-  m_CullTransparentMesh: 0
 --- !u!4 &693786795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4457718035388528, guid: 0b1e7ee6fce95d648a327d2edcb7687e,
@@ -7581,6 +7676,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -375.5187}
   m_SizeDelta: {x: 640, y: 1950}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &716550594 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114943896950758494, guid: 69d5c7572d2413b4ca18fc2eb532a004,
+    type: 2}
+  m_PrefabInternal: {fileID: 2015804702}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &716550595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114118007814014028, guid: 69d5c7572d2413b4ca18fc2eb532a004,
+    type: 2}
+  m_PrefabInternal: {fileID: 2015804702}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &720878145
 Prefab:
   m_ObjectHideFlags: 0
@@ -7641,9 +7748,31 @@ Prefab:
       propertyPath: mPosition
       value: LM
       objectReference: {fileID: 0}
+    - target: {fileID: 114185183669179928, guid: 4122fb2ba08389b43a7f760a5cfeb66d,
+        type: 2}
+      propertyPath: PurchaseImage
+      value: 
+      objectReference: {fileID: 410781292}
+    - target: {fileID: 114185183669179928, guid: 4122fb2ba08389b43a7f760a5cfeb66d,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 410781291}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4122fb2ba08389b43a7f760a5cfeb66d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &724401828 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114402084934207842, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1176266359}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &724401829 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114292480680195446, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1176266359}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &758996232
 GameObject:
   m_ObjectHideFlags: 0
@@ -8045,6 +8174,18 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000030517578, y: 0.4}
   m_SizeDelta: {x: 246, y: 48.26}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &814597866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114154441310086048, guid: 2315481ee81e4414e93a2354cac2363d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1156690326}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &814597867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114759776707743290, guid: 2315481ee81e4414e93a2354cac2363d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1156690326}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &829560324
 GameObject:
   m_ObjectHideFlags: 0
@@ -8589,7 +8730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 340}
+  m_AnchoredPosition: {x: 0, y: 299}
   m_SizeDelta: {x: -140, y: -865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &869186753
@@ -8604,7 +8745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.40784317, g: 0.7843138, b: 0.227451, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8828,6 +8969,26 @@ Prefab:
       propertyPath: mPosition
       value: CB2
       objectReference: {fileID: 0}
+    - target: {fileID: 114143913343680038, guid: 682457645b1236246bd4ca1edc79ac9f,
+        type: 2}
+      propertyPath: TicketPurchaseButtonImage
+      value: 
+      objectReference: {fileID: 1696888059}
+    - target: {fileID: 114143913343680038, guid: 682457645b1236246bd4ca1edc79ac9f,
+        type: 2}
+      propertyPath: TicketPurchaseButton
+      value: 
+      objectReference: {fileID: 1696888060}
+    - target: {fileID: 114143913343680038, guid: 682457645b1236246bd4ca1edc79ac9f,
+        type: 2}
+      propertyPath: PurchaseButtonImage
+      value: 
+      objectReference: {fileID: 91227960}
+    - target: {fileID: 114143913343680038, guid: 682457645b1236246bd4ca1edc79ac9f,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 91227959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 682457645b1236246bd4ca1edc79ac9f, type: 2}
   m_IsPrefabAsset: 0
@@ -9679,6 +9840,9 @@ MonoBehaviour:
   fillImage: {fileID: 1722802062}
   fillLevelImage: {fileID: 548148714}
   ItemID: 
+  UpgradeIconButton: {fileID: 926844709}
+  IncomeButton: {fileID: 124828379}
+  UpgradeCostButton: {fileID: 1415183369}
   mInitialCost: 720000
   mUpgradeCoefficient: 1.15
   mClub: {fileID: 1957345152}
@@ -9785,6 +9949,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &999714106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114390711780752448, guid: 431992bc85ea4554fbe44569873aa4b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 353176319}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &999714107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114891634418985334, guid: 431992bc85ea4554fbe44569873aa4b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 353176319}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1000515089
 GameObject:
   m_ObjectHideFlags: 0
@@ -10006,7 +10182,6 @@ RectTransform:
   - {fileID: 1239544548}
   - {fileID: 869186752}
   - {fileID: 1127887299}
-  - {fileID: 693195969}
   - {fileID: 327222131}
   - {fileID: 1412653355}
   m_Father: {fileID: 0}
@@ -10092,6 +10267,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1012878902}
   m_CullTransparentMesh: 0
+--- !u!114 &1039947805 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114781056451426070, guid: 403b6c3d3a24b944bba3db2c310c20d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1591328158}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1039947806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114050654989324994, guid: 403b6c3d3a24b944bba3db2c310c20d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1591328158}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1041081221
 GameObject:
   m_ObjectHideFlags: 0
@@ -10302,6 +10489,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1054986470 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114639911548003070, guid: a77db0c6fc4799547a42850082029aa3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1309570660}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1054986471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114052306231652282, guid: a77db0c6fc4799547a42850082029aa3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1309570660}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1056792836
 GameObject:
   m_ObjectHideFlags: 0
@@ -10501,6 +10700,9 @@ MonoBehaviour:
   fillImage: {fileID: 414769411}
   fillLevelImage: {fileID: 121583619}
   ItemID: 
+  UpgradeIconButton: {fileID: 153415193}
+  IncomeButton: {fileID: 1667388107}
+  UpgradeCostButton: {fileID: 1771385261}
   mInitialCost: 103680000
   mUpgradeCoefficient: 1.13
   mClub: {fileID: 1957345152}
@@ -10575,6 +10777,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1086642804}
   m_CullTransparentMesh: 0
+--- !u!114 &1089188924 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114417125395615638, guid: c651a93b84d955841b58503e15d2cbce,
+    type: 2}
+  m_PrefabInternal: {fileID: 149297483}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1089188925 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114816683402120380, guid: c651a93b84d955841b58503e15d2cbce,
+    type: 2}
+  m_PrefabInternal: {fileID: 149297483}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1090289253
 GameObject:
   m_ObjectHideFlags: 0
@@ -10654,6 +10868,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: LEVEL 12
+--- !u!114 &1093908045 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114317117301650982, guid: 431992bc85ea4554fbe44569873aa4b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 353176319}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1093908046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114274265250697752, guid: 431992bc85ea4554fbe44569873aa4b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 353176319}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1097405283
 GameObject:
   m_ObjectHideFlags: 0
@@ -10838,6 +11064,16 @@ Prefab:
       propertyPath: mPosition
       value: RB
       objectReference: {fileID: 0}
+    - target: {fileID: 114151727467360002, guid: c2d3e8b13d2d5e642a41add2ae07b13b,
+        type: 2}
+      propertyPath: PurchaseImage
+      value: 
+      objectReference: {fileID: 1449203219}
+    - target: {fileID: 114151727467360002, guid: c2d3e8b13d2d5e642a41add2ae07b13b,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1449203218}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d3e8b13d2d5e642a41add2ae07b13b, type: 2}
   m_IsPrefabAsset: 0
@@ -10976,7 +11212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 221}
+  m_AnchoredPosition: {x: 0, y: 142}
   m_SizeDelta: {x: -140, y: -865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127887300
@@ -11019,6 +11255,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1127887298}
   m_CullTransparentMesh: 0
+--- !u!114 &1131634112 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114402084934207842, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 2099880095}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1131634113 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114292480680195446, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 2099880095}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1135429977
 GameObject:
   m_ObjectHideFlags: 0
@@ -11157,6 +11405,26 @@ Prefab:
       propertyPath: mPosition
       value: LB
       objectReference: {fileID: 0}
+    - target: {fileID: 114034318597509276, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6,
+        type: 2}
+      propertyPath: TicketPurchaseButtonImage
+      value: 
+      objectReference: {fileID: 1460755959}
+    - target: {fileID: 114034318597509276, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6,
+        type: 2}
+      propertyPath: TicketPurchaseButton
+      value: 
+      objectReference: {fileID: 1460755960}
+    - target: {fileID: 114034318597509276, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6,
+        type: 2}
+      propertyPath: PurchaseButtonImage
+      value: 
+      objectReference: {fileID: 1418916248}
+    - target: {fileID: 114034318597509276, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1418916247}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6, type: 2}
   m_IsPrefabAsset: 0
@@ -11498,6 +11766,16 @@ Prefab:
       propertyPath: mPosition
       value: RM
       objectReference: {fileID: 0}
+    - target: {fileID: 114933511990661396, guid: 2315481ee81e4414e93a2354cac2363d,
+        type: 2}
+      propertyPath: PurchaseImage
+      value: 
+      objectReference: {fileID: 814597867}
+    - target: {fileID: 114933511990661396, guid: 2315481ee81e4414e93a2354cac2363d,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 814597866}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2315481ee81e4414e93a2354cac2363d, type: 2}
   m_IsPrefabAsset: 0
@@ -11635,6 +11913,26 @@ Prefab:
       propertyPath: mPosition
       value: GK
       objectReference: {fileID: 0}
+    - target: {fileID: 114625331240474746, guid: 0b1e7ee6fce95d648a327d2edcb7687e,
+        type: 2}
+      propertyPath: TicketPurchaseButton
+      value: 
+      objectReference: {fileID: 409549381}
+    - target: {fileID: 114625331240474746, guid: 0b1e7ee6fce95d648a327d2edcb7687e,
+        type: 2}
+      propertyPath: TicketPurchaseButtonImage
+      value: 
+      objectReference: {fileID: 409549380}
+    - target: {fileID: 114625331240474746, guid: 0b1e7ee6fce95d648a327d2edcb7687e,
+        type: 2}
+      propertyPath: PurchaseButtonImage
+      value: 
+      objectReference: {fileID: 59534365}
+    - target: {fileID: 114625331240474746, guid: 0b1e7ee6fce95d648a327d2edcb7687e,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 59534364}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b1e7ee6fce95d648a327d2edcb7687e, type: 2}
   m_IsPrefabAsset: 0
@@ -11830,6 +12128,26 @@ Prefab:
       propertyPath: mPosition
       value: ST2
       objectReference: {fileID: 0}
+    - target: {fileID: 114144735748127952, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+        type: 2}
+      propertyPath: TicketPurchaseButtonImage
+      value: 
+      objectReference: {fileID: 724401828}
+    - target: {fileID: 114144735748127952, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+        type: 2}
+      propertyPath: TicketPurchaseButton
+      value: 
+      objectReference: {fileID: 724401829}
+    - target: {fileID: 114144735748127952, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+        type: 2}
+      propertyPath: PurchaseButtonImage
+      value: 
+      objectReference: {fileID: 2140968822}
+    - target: {fileID: 114144735748127952, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 2140968821}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a9c9f823ef88d3478c286d92cf718f7, type: 2}
   m_IsPrefabAsset: 0
@@ -12576,6 +12894,16 @@ Prefab:
       propertyPath: mPosition
       value: CM2
       objectReference: {fileID: 0}
+    - target: {fileID: 114071298040478284, guid: a77db0c6fc4799547a42850082029aa3,
+        type: 2}
+      propertyPath: PurchaseImage
+      value: 
+      objectReference: {fileID: 1054986471}
+    - target: {fileID: 114071298040478284, guid: a77db0c6fc4799547a42850082029aa3,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1054986470}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77db0c6fc4799547a42850082029aa3, type: 2}
   m_IsPrefabAsset: 0
@@ -12742,6 +13070,9 @@ MonoBehaviour:
   fillImage: {fileID: 417289959}
   fillLevelImage: {fileID: 1062080711}
   ItemID: 
+  UpgradeIconButton: {fileID: 366523459}
+  IncomeButton: {fileID: 1488192654}
+  UpgradeCostButton: {fileID: 292408277}
   mInitialCost: 2.1499085e+12
   mUpgradeCoefficient: 1.09
   mClub: {fileID: 1957345152}
@@ -12862,6 +13193,18 @@ RectTransform:
   m_AnchoredPosition: {x: -27, y: 751.5941}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1369217787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114249066802187088, guid: 7500e7862818e084c83f83d14abe9117,
+    type: 2}
+  m_PrefabInternal: {fileID: 1918323323}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1369217788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114097054300108414, guid: 7500e7862818e084c83f83d14abe9117,
+    type: 2}
+  m_PrefabInternal: {fileID: 1918323323}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &1377397130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4400681784269056, guid: f5f4c79b6f80535418f449d4339d52b5,
@@ -12995,6 +13338,16 @@ Prefab:
       propertyPath: mPosition
       value: LB
       objectReference: {fileID: 0}
+    - target: {fileID: 114989040259874050, guid: ff569d0cc494f1f49bc138d34251bb59,
+        type: 2}
+      propertyPath: PurchaseImage
+      value: 
+      objectReference: {fileID: 1973967066}
+    - target: {fileID: 114989040259874050, guid: ff569d0cc494f1f49bc138d34251bb59,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1973967065}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff569d0cc494f1f49bc138d34251bb59, type: 2}
   m_IsPrefabAsset: 0
@@ -13017,6 +13370,9 @@ MonoBehaviour:
   fillImage: {fileID: 1408083832}
   fillLevelImage: {fileID: 266153056}
   ItemID: 
+  UpgradeIconButton: {fileID: 1990657769}
+  IncomeButton: {fileID: 1174611219}
+  UpgradeCostButton: {fileID: 2054695434}
   mInitialCost: 8640000
   mUpgradeCoefficient: 1.14
   mClub: {fileID: 1957345152}
@@ -13114,6 +13470,9 @@ MonoBehaviour:
   fillImage: {fileID: 2082736536}
   fillLevelImage: {fileID: 2063131420}
   ItemID: 
+  UpgradeIconButton: {fileID: 66391185}
+  IncomeButton: {fileID: 1150885899}
+  UpgradeCostButton: {fileID: 7559516}
   mInitialCost: 1.492992e+10
   mUpgradeCoefficient: 1.11
   mClub: {fileID: 1957345152}
@@ -13147,11 +13506,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1002274709}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -128}
+  m_AnchoredPosition: {x: 0, y: -107.99999}
   m_SizeDelta: {x: -140, y: -865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412653356
@@ -13186,7 +13545,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TO DOUBLE YOUR INCOME TO
+  m_Text: WATCH AN AD TO DOUBLE YOUR INCOME TO
 --- !u!222 &1412653357
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13384,6 +13743,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0}
   m_SizeDelta: {x: 760, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1418916247 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114135921510532132, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1140376223}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1418916248 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114220094925692532, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1140376223}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1418990860
 GameObject:
   m_ObjectHideFlags: 0
@@ -13549,6 +13920,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1446557009}
   m_CullTransparentMesh: 0
+--- !u!114 &1449203218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114961076087685682, guid: c2d3e8b13d2d5e642a41add2ae07b13b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1108886277}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1449203219 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114161595793528680, guid: c2d3e8b13d2d5e642a41add2ae07b13b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1108886277}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1458737269
 Prefab:
   m_ObjectHideFlags: 0
@@ -13609,6 +13992,16 @@ Prefab:
       propertyPath: mPosition
       value: ST2
       objectReference: {fileID: 0}
+    - target: {fileID: 114975022583971486, guid: f5f4c79b6f80535418f449d4339d52b5,
+        type: 2}
+      propertyPath: PurchaseImage
+      value: 
+      objectReference: {fileID: 506714446}
+    - target: {fileID: 114975022583971486, guid: f5f4c79b6f80535418f449d4339d52b5,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 506714445}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f4c79b6f80535418f449d4339d52b5, type: 2}
   m_IsPrefabAsset: 0
@@ -13691,6 +14084,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1460755959 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114020277626062684, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1140376223}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1460755960 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114580963902867096, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1140376223}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1460799026
 GameObject:
   m_ObjectHideFlags: 0
@@ -13815,6 +14220,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\xA34,054,045,544"
+--- !u!114 &1466810440 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114894679311734328, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 2099880095}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1466810441 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114280486351241606, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 2099880095}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1488192652
 GameObject:
   m_ObjectHideFlags: 0
@@ -14236,6 +14653,26 @@ Prefab:
       propertyPath: mPosition
       value: RM
       objectReference: {fileID: 0}
+    - target: {fileID: 114252601176831904, guid: f632bd0377f49a74b895f79d06e5e9c5,
+        type: 2}
+      propertyPath: TicketPurchaseButtonImage
+      value: 
+      objectReference: {fileID: 177817799}
+    - target: {fileID: 114252601176831904, guid: f632bd0377f49a74b895f79d06e5e9c5,
+        type: 2}
+      propertyPath: TicketPurchaseButton
+      value: 
+      objectReference: {fileID: 177817800}
+    - target: {fileID: 114252601176831904, guid: f632bd0377f49a74b895f79d06e5e9c5,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1871405537}
+    - target: {fileID: 114252601176831904, guid: f632bd0377f49a74b895f79d06e5e9c5,
+        type: 2}
+      propertyPath: PurchaseButtonImage
+      value: 
+      objectReference: {fileID: 1871405538}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f632bd0377f49a74b895f79d06e5e9c5, type: 2}
   m_IsPrefabAsset: 0
@@ -14392,6 +14829,26 @@ Prefab:
       propertyPath: mPosition
       value: CM2
       objectReference: {fileID: 0}
+    - target: {fileID: 114167050850449396, guid: 403b6c3d3a24b944bba3db2c310c20d8,
+        type: 2}
+      propertyPath: TicketPurchaseButtonImage
+      value: 
+      objectReference: {fileID: 1039947805}
+    - target: {fileID: 114167050850449396, guid: 403b6c3d3a24b944bba3db2c310c20d8,
+        type: 2}
+      propertyPath: TicketPurchaseButton
+      value: 
+      objectReference: {fileID: 1039947806}
+    - target: {fileID: 114167050850449396, guid: 403b6c3d3a24b944bba3db2c310c20d8,
+        type: 2}
+      propertyPath: PurchaseButtonImage
+      value: 
+      objectReference: {fileID: 1711925906}
+    - target: {fileID: 114167050850449396, guid: 403b6c3d3a24b944bba3db2c310c20d8,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1711925905}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 403b6c3d3a24b944bba3db2c310c20d8, type: 2}
   m_IsPrefabAsset: 0
@@ -14912,6 +15369,9 @@ MonoBehaviour:
   fillImage: {fileID: 1244492958}
   fillLevelImage: {fileID: 647542449}
   ItemID: 
+  UpgradeIconButton: {fileID: 854734873}
+  IncomeButton: {fileID: 1855872969}
+  UpgradeCostButton: {fileID: 764282764}
   mInitialCost: 4000
   mUpgradeCoefficient: 1.07
   mClub: {fileID: 1957345152}
@@ -15307,6 +15767,9 @@ MonoBehaviour:
   fillImage: {fileID: 1705789737}
   fillLevelImage: {fileID: 282001261}
   ItemID: 
+  UpgradeIconButton: {fileID: 2084723318}
+  IncomeButton: {fileID: 447265812}
+  UpgradeCostButton: {fileID: 1156040232}
   mInitialCost: 1.24416e+9
   mUpgradeCoefficient: 1.12
   mClub: {fileID: 1957345152}
@@ -15357,6 +15820,18 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000030517578, y: -0}
   m_SizeDelta: {x: 246, y: 48.26}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1696888059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114618114502057760, guid: 682457645b1236246bd4ca1edc79ac9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 899231574}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1696888060 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114177258070732662, guid: 682457645b1236246bd4ca1edc79ac9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 899231574}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1699195931
 GameObject:
   m_ObjectHideFlags: 0
@@ -15664,6 +16139,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1709449075}
   m_CullTransparentMesh: 0
+--- !u!114 &1711925905 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114543092556103764, guid: 403b6c3d3a24b944bba3db2c310c20d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1591328158}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1711925906 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114236313713099500, guid: 403b6c3d3a24b944bba3db2c310c20d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1591328158}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1721632368
 GameObject:
   m_ObjectHideFlags: 0
@@ -16546,6 +17033,9 @@ MonoBehaviour:
   fillImage: {fileID: 1302866193}
   fillLevelImage: {fileID: 323136030}
   ItemID: 
+  UpgradeIconButton: {fileID: 519256639}
+  IncomeButton: {fileID: 1763807290}
+  UpgradeCostButton: {fileID: 1709449077}
   mInitialCost: 60000
   mUpgradeCoefficient: 1.16
   mClub: {fileID: 1957345152}
@@ -16685,6 +17175,26 @@ Prefab:
       propertyPath: mPosition
       value: LM
       objectReference: {fileID: 0}
+    - target: {fileID: 114111595520085476, guid: 8ed855c516de5ce48a86759f8a585c15,
+        type: 2}
+      propertyPath: TicketPurchaseButtonImage
+      value: 
+      objectReference: {fileID: 263515975}
+    - target: {fileID: 114111595520085476, guid: 8ed855c516de5ce48a86759f8a585c15,
+        type: 2}
+      propertyPath: TicketPurchaseButton
+      value: 
+      objectReference: {fileID: 263515976}
+    - target: {fileID: 114111595520085476, guid: 8ed855c516de5ce48a86759f8a585c15,
+        type: 2}
+      propertyPath: PurchaseButtonImage
+      value: 
+      objectReference: {fileID: 654146916}
+    - target: {fileID: 114111595520085476, guid: 8ed855c516de5ce48a86759f8a585c15,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 654146915}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed855c516de5ce48a86759f8a585c15, type: 2}
   m_IsPrefabAsset: 0
@@ -16800,6 +17310,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1805065620}
   m_CullTransparentMesh: 0
+--- !u!114 &1815227985 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114785648802287236, guid: d08ac5b97019ef244a7993b659d58010,
+    type: 2}
+  m_PrefabInternal: {fileID: 1858326449}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1815227986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114726759837396276, guid: d08ac5b97019ef244a7993b659d58010,
+    type: 2}
+  m_PrefabInternal: {fileID: 1858326449}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &1820032291 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4675911326125974, guid: 2315481ee81e4414e93a2354cac2363d,
@@ -17150,6 +17672,16 @@ Prefab:
       propertyPath: mPosition
       value: CB2
       objectReference: {fileID: 0}
+    - target: {fileID: 114358248818107390, guid: d08ac5b97019ef244a7993b659d58010,
+        type: 2}
+      propertyPath: PurchaseImage
+      value: 
+      objectReference: {fileID: 1815227986}
+    - target: {fileID: 114358248818107390, guid: d08ac5b97019ef244a7993b659d58010,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1815227985}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d08ac5b97019ef244a7993b659d58010, type: 2}
   m_IsPrefabAsset: 0
@@ -17329,6 +17861,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 247, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1871405537 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114760001512025646, guid: f632bd0377f49a74b895f79d06e5e9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1544957343}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1871405538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114102201259309074, guid: f632bd0377f49a74b895f79d06e5e9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1544957343}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1873871265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114141936056131014, guid: 41e3b497e58d34746b24e62cd47cfe66,
+    type: 2}
+  m_PrefabInternal: {fileID: 2015017654}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1873871266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114520205128982166, guid: 41e3b497e58d34746b24e62cd47cfe66,
+    type: 2}
+  m_PrefabInternal: {fileID: 2015017654}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1874719784
 GameObject:
   m_ObjectHideFlags: 0
@@ -17734,6 +18290,16 @@ Prefab:
       propertyPath: mPosition
       value: ST1
       objectReference: {fileID: 0}
+    - target: {fileID: 114989598898117406, guid: 7500e7862818e084c83f83d14abe9117,
+        type: 2}
+      propertyPath: PurchaseImage
+      value: 
+      objectReference: {fileID: 1369217788}
+    - target: {fileID: 114989598898117406, guid: 7500e7862818e084c83f83d14abe9117,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1369217787}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7500e7862818e084c83f83d14abe9117, type: 2}
   m_IsPrefabAsset: 0
@@ -17955,6 +18521,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!114 &1943460751 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114487961175865978, guid: 2bf49ac1fd35d144797625212e23671e,
+    type: 2}
+  m_PrefabInternal: {fileID: 213722856}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1943460752 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114882918064877160, guid: 2bf49ac1fd35d144797625212e23671e,
+    type: 2}
+  m_PrefabInternal: {fileID: 213722856}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1944235035
 GameObject:
   m_ObjectHideFlags: 0
@@ -18223,6 +18801,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1973967065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114071580434796700, guid: ff569d0cc494f1f49bc138d34251bb59,
+    type: 2}
+  m_PrefabInternal: {fileID: 1405300475}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1973967066 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114667380420787522, guid: ff569d0cc494f1f49bc138d34251bb59,
+    type: 2}
+  m_PrefabInternal: {fileID: 1405300475}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1983226190
 GameObject:
   m_ObjectHideFlags: 0
@@ -18660,6 +19250,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2005267027}
   m_CullTransparentMesh: 0
+--- !u!114 &2005978155 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114904939625011922, guid: 41e3b497e58d34746b24e62cd47cfe66,
+    type: 2}
+  m_PrefabInternal: {fileID: 2015017654}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &2005978156 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114535038324596134, guid: 41e3b497e58d34746b24e62cd47cfe66,
+    type: 2}
+  m_PrefabInternal: {fileID: 2015017654}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &2015017654
 Prefab:
   m_ObjectHideFlags: 0
@@ -18719,6 +19321,26 @@ Prefab:
       propertyPath: mPosition
       value: CB1
       objectReference: {fileID: 0}
+    - target: {fileID: 114778645071353934, guid: 41e3b497e58d34746b24e62cd47cfe66,
+        type: 2}
+      propertyPath: TicketPurchaseButtonImage
+      value: 
+      objectReference: {fileID: 2005978155}
+    - target: {fileID: 114778645071353934, guid: 41e3b497e58d34746b24e62cd47cfe66,
+        type: 2}
+      propertyPath: TicketPurchaseButton
+      value: 
+      objectReference: {fileID: 2005978156}
+    - target: {fileID: 114778645071353934, guid: 41e3b497e58d34746b24e62cd47cfe66,
+        type: 2}
+      propertyPath: PurchaseButtonImage
+      value: 
+      objectReference: {fileID: 1873871266}
+    - target: {fileID: 114778645071353934, guid: 41e3b497e58d34746b24e62cd47cfe66,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1873871265}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41e3b497e58d34746b24e62cd47cfe66, type: 2}
   m_IsPrefabAsset: 0
@@ -18786,6 +19408,26 @@ Prefab:
       propertyPath: mPosition
       value: CM1
       objectReference: {fileID: 0}
+    - target: {fileID: 114567840178119738, guid: 69d5c7572d2413b4ca18fc2eb532a004,
+        type: 2}
+      propertyPath: TicketPurchaseButtonImage
+      value: 
+      objectReference: {fileID: 716550594}
+    - target: {fileID: 114567840178119738, guid: 69d5c7572d2413b4ca18fc2eb532a004,
+        type: 2}
+      propertyPath: PurchaseButtonImage
+      value: 
+      objectReference: {fileID: 106356213}
+    - target: {fileID: 114567840178119738, guid: 69d5c7572d2413b4ca18fc2eb532a004,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 106356212}
+    - target: {fileID: 114567840178119738, guid: 69d5c7572d2413b4ca18fc2eb532a004,
+        type: 2}
+      propertyPath: TicketPurchaseButton
+      value: 
+      objectReference: {fileID: 716550595}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69d5c7572d2413b4ca18fc2eb532a004, type: 2}
   m_IsPrefabAsset: 0
@@ -18875,6 +19517,9 @@ MonoBehaviour:
   fillImage: {fileID: 1062215886}
   fillLevelImage: {fileID: 1916877962}
   ItemID: 
+  UpgradeIconButton: {fileID: 281950381}
+  IncomeButton: {fileID: 1000515091}
+  UpgradeCostButton: {fileID: 1699195933}
   mInitialCost: 1.7915904e+11
   mUpgradeCoefficient: 1.1
   mClub: {fileID: 1957345152}
@@ -19586,6 +20231,26 @@ Prefab:
       propertyPath: mPosition
       value: ST1
       objectReference: {fileID: 0}
+    - target: {fileID: 114144735748127952, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+        type: 2}
+      propertyPath: TicketPurchaseButtonImage
+      value: 
+      objectReference: {fileID: 1131634112}
+    - target: {fileID: 114144735748127952, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+        type: 2}
+      propertyPath: TicketPurchaseButton
+      value: 
+      objectReference: {fileID: 1131634113}
+    - target: {fileID: 114144735748127952, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+        type: 2}
+      propertyPath: PurchaseButtonImage
+      value: 
+      objectReference: {fileID: 1466810441}
+    - target: {fileID: 114144735748127952, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+        type: 2}
+      propertyPath: PurchaseButton
+      value: 
+      objectReference: {fileID: 1466810440}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a9c9f823ef88d3478c286d92cf718f7, type: 2}
   m_IsPrefabAsset: 0
@@ -19613,6 +20278,9 @@ MonoBehaviour:
   fillImage: {fileID: 1415202134}
   fillLevelImage: {fileID: 1797989338}
   ItemID: 
+  UpgradeIconButton: {fileID: 1612563352}
+  IncomeButton: {fileID: 290214523}
+  UpgradeCostButton: {fileID: 116591615}
   mInitialCost: 2.5798902e+13
   mUpgradeCoefficient: 1.08
   mClub: {fileID: 1957345152}
@@ -19637,6 +20305,9 @@ MonoBehaviour:
   fillImage: {fileID: 202216924}
   fillLevelImage: {fileID: 1116955978}
   ItemID: 
+  UpgradeIconButton: {fileID: 303312349}
+  IncomeButton: {fileID: 1918353681}
+  UpgradeCostButton: {fileID: 103609882}
   mInitialCost: 3.095868e+14
   mUpgradeCoefficient: 1.07
   mClub: {fileID: 1957345152}
@@ -19950,3 +20621,15 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: LEVEL 12
+--- !u!114 &2140968821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114894679311734328, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1176266359}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &2140968822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114280486351241606, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1176266359}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}

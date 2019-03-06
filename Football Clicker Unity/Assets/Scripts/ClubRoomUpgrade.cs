@@ -37,9 +37,14 @@ public class ClubRoomUpgrade : MonoBehaviour
     [SerializeField]
     protected UnityEngine.UI.Text TicketPurchaseText;
     [SerializeField]
-    protected UnityEngine.UI.Image PurchaseButton;
+    protected UnityEngine.UI.Image PurchaseButtonImage;
     [SerializeField]
-    protected UnityEngine.UI.Image TicketPurchaseButton;
+    protected UnityEngine.UI.Image TicketPurchaseButtonImage;
+
+    [SerializeField]
+    private UnityEngine.UI.Button TicketPurchaseButton;
+    [SerializeField]
+    private UnityEngine.UI.Button PurchaseButton;
 
     [SerializeField]
     protected int mUnlockLevel;
@@ -79,6 +84,36 @@ public class ClubRoomUpgrade : MonoBehaviour
             TicketPurchaseText.text = mTicketPurchaseCost.ToString();
             mIsEnabled = true;
         }
+
+        if (!mIsOwned)
+        {
+            if (mClub.Tickets >= mTicketPurchaseCost && mObjectToManage.IsEnabled)
+            {
+                TicketPurchaseButton.interactable = true;
+            }
+            else
+            {
+                TicketPurchaseButton.interactable = false;
+            }
+
+            if (mClub.Money >= PurchaseCost && mObjectToManage.IsEnabled)
+            {
+                PurchaseButton.interactable = true;
+            }
+            else
+            {
+                PurchaseButton.interactable = false;
+            }
+        }
+        else
+        {
+            PurchaseButton.interactable = false;
+            TicketPurchaseButton.interactable = false;
+            PurchaseText.text = "Owned";
+            PurchaseButtonImage.color = Color.red;
+        }
+
+
     }
 
     public void SetClubRoomUpgradeData(ClubRoomUpgradeData upgradeData)
@@ -105,8 +140,8 @@ public class ClubRoomUpgrade : MonoBehaviour
             mClub.UpdateMoney(-mPurchaseCost);
             AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "Upgrade", mPurchaseCost, mPosition);
             PurchaseText.text = "Owned";
-            PurchaseButton.color = Color.red;
-            TicketPurchaseButton.color = Color.red;
+            PurchaseButtonImage.color = Color.red;
+            TicketPurchaseButtonImage.color = Color.red;
             mIsOwned = true;
             mObjectToManage.UpdateIncomeMultiplyer(2);
         }
@@ -120,8 +155,8 @@ public class ClubRoomUpgrade : MonoBehaviour
             mClub.UpdateTickets(-mTicketPurchaseCost);
             AnalyticsEvent.ItemSpent(AcquisitionType.Premium, "Upgrade", mTicketPurchaseCost, mPosition);
             PurchaseText.text = "Owned";
-            PurchaseButton.color = Color.red;
-            TicketPurchaseButton.color = Color.red;
+            PurchaseButtonImage.color = Color.red;
+            TicketPurchaseButtonImage.color = Color.red;
             mIsOwned = true;
             mObjectToManage.UpdateIncomeMultiplyer(2);
         }

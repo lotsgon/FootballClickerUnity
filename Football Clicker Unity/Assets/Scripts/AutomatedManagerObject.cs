@@ -34,7 +34,10 @@ public class AutomatedManagerObject : MonoBehaviour
     [SerializeField]
     protected UnityEngine.UI.Text PurchaseText;
     [SerializeField]
-    protected UnityEngine.UI.Image PurchaseButton;
+    protected UnityEngine.UI.Image PurchaseImage;
+
+    [SerializeField]
+    private UnityEngine.UI.Button PurchaseButton;
 
     [SerializeField]
     protected int mUnlockLevel;
@@ -77,6 +80,25 @@ public class AutomatedManagerObject : MonoBehaviour
             mObjectToManage.OnIncomeClick();
         }
 
+        if (!mIsOwned)
+        {
+
+            if (mClub.Money >= PurchaseCost && mObjectToManage.IsEnabled)
+            {
+                PurchaseButton.interactable = true;
+            }
+            else
+            {
+                PurchaseButton.interactable = false;
+            }
+        }
+        else
+        {
+            PurchaseButton.interactable = false;
+            PurchaseText.text = "Owned";
+            PurchaseImage.color = Color.red;
+        }
+
     }
 
     public void SetAutomatedManagerObjectData(AutomatedManagerObjectData managerData)
@@ -102,7 +124,7 @@ public class AutomatedManagerObject : MonoBehaviour
             mIsEnabled = false;
             mClub.UpdateMoney(-mPurchaseCost);
             PurchaseText.text = "Owned";
-            PurchaseButton.color = Color.red;
+            PurchaseImage.color = Color.red;
             mIsOwned = true;
         }
     }

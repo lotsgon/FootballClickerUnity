@@ -61,6 +61,9 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
     public Image fillImage;
     public Image fillLevelImage;
     public string ItemID;
+    public Button UpgradeIconButton;
+    public Button IncomeButton;
+    public Button UpgradeCostButton;
 
     [SerializeField]
     protected float mInitialCost;
@@ -112,6 +115,27 @@ public abstract class UpgradeableClickerObject : MonoBehaviour
             UpdateFillImage();
         }
         UpdateText();
+
+        if(mClub.Money >= mUpgradeCost)
+        {
+            UpgradeIconButton.interactable = true;
+        }
+        else
+        {
+            UpgradeIconButton.interactable = false;
+        }
+
+        if (IsEnabled)
+        {
+            IncomeButton.interactable = true;
+            UpgradeCostButton.interactable = true;
+        }
+        else
+        {
+            IncomeButton.interactable = false;
+            UpgradeCostButton.interactable = false;
+            fillImage.fillAmount = 0.0f;
+        }
     }
 
     public void SetUpgradeableClickerObjectData(UpgradeableClickerObjectData upgradeableClickerObjectData)

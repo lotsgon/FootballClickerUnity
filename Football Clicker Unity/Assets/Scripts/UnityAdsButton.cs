@@ -37,9 +37,13 @@ public class UnityAdsButton : MonoBehaviour
 
     void Update()
     {
-        if (adButton)
+        if (adButton && mClub.TimeUntilAdvert == 0)
         {
             adButton.interactable = Monetization.IsReady(placementId);
+        }
+        else
+        {
+            adButton.interactable = false;
         }
     }
 
@@ -56,7 +60,8 @@ public class UnityAdsButton : MonoBehaviour
     {
         if (result == ShowResult.Finished)
         {
-            mClub.UpdateTickets(1);
+            mClub.UpdateTickets(3);
+            mClub.UpdateTimeUntilAdvert(14400);
             AnalyticsEvent.AdComplete(true);
         }
         else if (result == ShowResult.Skipped)

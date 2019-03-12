@@ -8,12 +8,14 @@ public class ClubData
     public float Money;
     public int Tickets;
     public long SaveTime;
+    public int TimeUntilAdvert;
 
     public ClubData(Club club)
     {
         Money = club.Money;
         Tickets = club.Tickets;
         SaveTime = club.SaveTime;
+        TimeUntilAdvert = club.TimeUntilAdvert;
     }
 }
 
@@ -31,6 +33,7 @@ public class Club : MonoBehaviour
     public long Value { get; private set; }
     public long SaveTime { get; private set; }
     public float IncomeWhileAway { get; private set; }
+    public int TimeUntilAdvert { get; private set; }
 
     public UnityEngine.UI.Text MoneyDisplay;
     public UnityEngine.UI.Text TicketsDisplay;
@@ -42,11 +45,18 @@ public class Club : MonoBehaviour
     {
         Money = 100000;
         Tickets = 5;
+        TimeUntilAdvert = 0;
     }
 
     public void Awake()
     {
         SaveLoadManager.LoadClub();
+
+        var saveTime = DateTime.FromFileTime(this.SaveTime);
+
+        TimeSpan timeGone = DateTime.Now - saveTime;
+
+        UpdateTimeUntilAdvert(Mathf.Min(0, -(int)timeGone.TotalSeconds));
 
         var players = UnityEngine.Object.FindObjectsOfType<SquadPlayer>();
 
@@ -87,7 +97,10 @@ public class Club : MonoBehaviour
     // Update is called once per second
     void FixedUpdate()
     {
-
+        if (TimeUntilAdvert > 0)
+        {
+            TimeUntilAdvert -= 1;
+        }
     }
 
     public void UpdateMoney(float money)
@@ -100,11 +113,17 @@ public class Club : MonoBehaviour
         Tickets += tickets;
     }
 
+    public void UpdateTimeUntilAdvert(int time)
+    {
+        TimeUntilAdvert = Mathf.Clamp(TimeUntilAdvert + time, 0, 14400);
+    }
+
     public void SetClubData(ClubData clubData)
     {
         Money = clubData.Money;
         Tickets = clubData.Tickets;
         SaveTime = clubData.SaveTime;
+        TimeUntilAdvert = clubData.TimeUntilAdvert;
     }
 
     private void OnApplicationPause()

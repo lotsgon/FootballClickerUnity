@@ -43,7 +43,7 @@ public class Club : MonoBehaviour
 
     public Club()
     {
-        Money = 100000;
+        Money = 10000;
         Tickets = 5;
         TimeUntilAdvert = 0;
     }

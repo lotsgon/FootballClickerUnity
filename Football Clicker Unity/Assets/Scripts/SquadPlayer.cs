@@ -85,7 +85,7 @@ public class SquadPlayer : UpgradeableClickerObject
             UpgradeLevel += 1;
             if (UpgradeLevel == 1 || UpgradeLevel % 25 == 0)
             {
-                AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "PlayerUpgrade-Red-4", mUpgradeCost, mPosition);
+                AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "PlayerUpgrade-Pink-2", mUpgradeCost, mPosition);
                 AnalyticsEvent.LevelUp(mPosition, UpgradeLevel);
             }
             UpdateFillLevelImage();

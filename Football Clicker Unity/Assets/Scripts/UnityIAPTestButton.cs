@@ -30,8 +30,8 @@ namespace Assets.Scripts
         void MakePurchase()
         {
             Analytics.Transaction(storeItemId, (decimal)storeItemPrice, "GBP");
-            AnalyticsEvent.IAPTransaction("Tickets", storeItemPrice, storeItemId);
-            AnalyticsEvent.ItemAcquired(AcquisitionType.Premium, "Tickets", storeItemPrice, storeItemId);
+            AnalyticsEvent.IAPTransaction("Tickets-Red-4", storeItemPrice, storeItemId);
+            AnalyticsEvent.ItemAcquired(AcquisitionType.Premium, "Tickets-Red-4", storeItemPrice, storeItemId);
             AnalyticsEvent.StoreItemClick(StoreType.Premium, storeItemId);
             mClub.UpdateTickets(amount);
         }

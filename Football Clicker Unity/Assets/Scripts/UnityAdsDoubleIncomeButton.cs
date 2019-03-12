@@ -52,6 +52,7 @@ public class UnityAdsDoubleIncomeButton : MonoBehaviour
         ShowAdPlacementContent ad = Monetization.GetPlacementContent(placementId) as ShowAdPlacementContent;
         ad.Show(options);
         AnalyticsEvent.AdStart(true);
+        AnalyticsEvent.Custom("DoubleIncomeAdvert-Red-4");
     }
 
     void HandleShowResult(ShowResult result)

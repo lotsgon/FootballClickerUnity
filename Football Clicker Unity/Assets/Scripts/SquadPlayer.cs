@@ -83,8 +83,11 @@ public class SquadPlayer : UpgradeableClickerObject
         {
             mClub.UpdateMoney(-mUpgradeCost);
             UpgradeLevel += 1;
-            AnalyticsEvent.LevelUp(UpgradeLevel);
-            //AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "PlayerUpgrade", mUpgradeCost, mPosition);
+            if (UpgradeLevel == 1 || UpgradeLevel % 25 == 0)
+            {
+                AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "PlayerUpgrade-Red-4", mUpgradeCost, mPosition);
+                AnalyticsEvent.LevelUp(mPosition, UpgradeLevel);
+            }
             UpdateFillLevelImage();
             UpdateUpgradeIncome(2.25f);
             UpdateUpgradeCost();
@@ -100,7 +103,7 @@ public class SquadPlayer : UpgradeableClickerObject
 
         var manager = UnityEngine.Object.FindObjectsOfType<AutomatedManagerObject>().Where(x => x.Position == mPosition).FirstOrDefault();
 
-        if(manager == null || !manager.IsOwned)
+        if (manager == null || !manager.IsOwned)
         {
             return 0.0f;
         }

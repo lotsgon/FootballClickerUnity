@@ -54,7 +54,7 @@ public class UnityAdsButton : MonoBehaviour
         ShowAdPlacementContent ad = Monetization.GetPlacementContent(placementId) as ShowAdPlacementContent;
         ad.Show(options);
         AnalyticsEvent.AdStart(true);
-        AnalyticsEvent.Custom("RewardedAdvert-Red-4");
+        AnalyticsEvent.Custom("RewardedAdvert-Blue-1");
     }
 
     void HandleShowResult(ShowResult result)

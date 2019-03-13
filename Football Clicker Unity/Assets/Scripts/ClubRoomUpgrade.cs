@@ -138,7 +138,7 @@ public class ClubRoomUpgrade : MonoBehaviour
         {
             mIsEnabled = false;
             mClub.UpdateMoney(-mPurchaseCost);
-            AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "Upgrade-Pink-2", mPurchaseCost, mPosition);
+            AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "Upgrade-Green-3", mPurchaseCost, mPosition);
             PurchaseText.text = "Owned";
             PurchaseButtonImage.color = Color.red;
             TicketPurchaseButtonImage.color = Color.red;
@@ -153,7 +153,7 @@ public class ClubRoomUpgrade : MonoBehaviour
         {
             mIsEnabled = false;
             mClub.UpdateTickets(-mTicketPurchaseCost);
-            AnalyticsEvent.ItemSpent(AcquisitionType.Premium, "Upgrade-Pink-2", mTicketPurchaseCost, mPosition);
+            AnalyticsEvent.ItemSpent(AcquisitionType.Premium, "Upgrade-Green-3", mTicketPurchaseCost, mPosition);
             PurchaseText.text = "Owned";
             PurchaseButtonImage.color = Color.red;
             TicketPurchaseButtonImage.color = Color.red;

@@ -45,7 +45,7 @@ public class Club : MonoBehaviour
     {
         Money = 10000;
         Tickets = 5;
-        TimeUntilAdvert = 0;
+        TimeUntilAdvert = 30;
     }
 
     public void Awake()
@@ -56,7 +56,7 @@ public class Club : MonoBehaviour
 
         TimeSpan timeGone = DateTime.Now - saveTime;
 
-        UpdateTimeUntilAdvert(Mathf.Min(0, -(int)timeGone.TotalSeconds));
+        UpdateTimeUntilAdvert(Mathf.Min(0, -(int)timeGone.TotalSeconds) + 5);
 
         var players = UnityEngine.Object.FindObjectsOfType<SquadPlayer>();
 
@@ -115,7 +115,7 @@ public class Club : MonoBehaviour
 
     public void UpdateTimeUntilAdvert(int time)
     {
-        TimeUntilAdvert = Mathf.Clamp(TimeUntilAdvert + time, 0, 14400);
+        TimeUntilAdvert = Mathf.Clamp(TimeUntilAdvert + time, 15, 300);
     }
 
     public void SetClubData(ClubData clubData)

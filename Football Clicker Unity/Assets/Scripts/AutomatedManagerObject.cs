@@ -120,7 +120,7 @@ public class AutomatedManagerObject : MonoBehaviour
     {
         if (mObjectToManage.UpgradeLevel > 0 && CurrencyResources.CanAfford(mClub.Money, mPurchaseCost) && !mIsOwned)
         {
-            AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "Manager-Pink-2", mPurchaseCost, mPosition);
+            AnalyticsEvent.ItemSpent(AcquisitionType.Soft, "Manager-Green-3", mPurchaseCost, mPosition);
             mIsEnabled = false;
             mClub.UpdateMoney(-mPurchaseCost);
             PurchaseText.text = "Owned";

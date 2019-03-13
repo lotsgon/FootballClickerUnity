@@ -1,16 +1,13 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Monetization;
 using UnityEngine.Analytics;
+using UnityEngine.Monetization;
 
-[RequireComponent(typeof(Button))]
 public class UnityAdsButton : MonoBehaviour
 {
     [SerializeField]
     private bool testMode = true;
     [SerializeField]
     private string placementId = "video";
-    private Button adButton;
 
     [SerializeField]
     private Club mClub;
@@ -23,12 +20,6 @@ public class UnityAdsButton : MonoBehaviour
 
     void Start()
     {
-        adButton = GetComponent<Button>();
-        if (adButton)
-        {
-            adButton.onClick.AddListener(ShowAd);
-        }
-
         if (Monetization.isSupported)
         {
             Monetization.Initialize(gameId, testMode);
@@ -37,13 +28,9 @@ public class UnityAdsButton : MonoBehaviour
 
     void Update()
     {
-        if (adButton && mClub.TimeUntilAdvert == 0)
+        if (mClub.TimeUntilAdvert == 0)
         {
-            adButton.interactable = Monetization.IsReady(placementId);
-        }
-        else
-        {
-            adButton.interactable = false;
+            ShowAd();
         }
     }
 
@@ -54,15 +41,13 @@ public class UnityAdsButton : MonoBehaviour
         ShowAdPlacementContent ad = Monetization.GetPlacementContent(placementId) as ShowAdPlacementContent;
         ad.Show(options);
         AnalyticsEvent.AdStart(true);
-        AnalyticsEvent.Custom("RewardedAdvert-Red-4");
+        AnalyticsEvent.Custom("ForcedAdvert-Green-3");
     }
 
     void HandleShowResult(ShowResult result)
     {
         if (result == ShowResult.Finished)
         {
-            mClub.UpdateTickets(3);
-            mClub.UpdateTimeUntilAdvert(14400);
             AnalyticsEvent.AdComplete(true);
         }
         else if (result == ShowResult.Skipped)
@@ -74,5 +59,6 @@ public class UnityAdsButton : MonoBehaviour
         {
             Debug.LogError("Video failed to show");
         }
+        mClub.UpdateTimeUntilAdvert(300);
     }
 }

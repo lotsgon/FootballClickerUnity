@@ -4408,6 +4408,19 @@ Prefab:
       propertyPath: PurchaseButton
       value: 
       objectReference: {fileID: 999714106}
+    - target: {fileID: 1941899328009608, guid: 431992bc85ea4554fbe44569873aa4b9, type: 2}
+      propertyPath: m_Name
+      value: RBMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870409327576078, guid: 431992bc85ea4554fbe44569873aa4b9, type: 2}
+      propertyPath: m_Name
+      value: Multiplier Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975977338445950, guid: 431992bc85ea4554fbe44569873aa4b9,
+        type: 2}
+      propertyPath: m_Text
+      value: Right Back Multiplier X2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 431992bc85ea4554fbe44569873aa4b9, type: 2}
   m_IsPrefabAsset: 0
@@ -8989,6 +9002,19 @@ Prefab:
       propertyPath: PurchaseButton
       value: 
       objectReference: {fileID: 91227959}
+    - target: {fileID: 1663160529086926, guid: 682457645b1236246bd4ca1edc79ac9f, type: 2}
+      propertyPath: m_Name
+      value: CB2Multiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466683483450288, guid: 682457645b1236246bd4ca1edc79ac9f, type: 2}
+      propertyPath: m_Name
+      value: Multiplier Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562163755680462, guid: 682457645b1236246bd4ca1edc79ac9f,
+        type: 2}
+      propertyPath: m_Text
+      value: Center Back Multiplier X2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 682457645b1236246bd4ca1edc79ac9f, type: 2}
   m_IsPrefabAsset: 0
@@ -11303,6 +11329,19 @@ Prefab:
       propertyPath: PurchaseButton
       value: 
       objectReference: {fileID: 1418916247}
+    - target: {fileID: 1286522643298830, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6, type: 2}
+      propertyPath: m_Name
+      value: LBMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079841785381136, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6, type: 2}
+      propertyPath: m_Name
+      value: Multiplier Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 114041827896634940, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6,
+        type: 2}
+      propertyPath: m_Text
+      value: Left Back Multiplier X2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa12deb0e5f9a834bb9e3e8d94dcb0e6, type: 2}
   m_IsPrefabAsset: 0
@@ -11811,6 +11850,19 @@ Prefab:
       propertyPath: PurchaseButton
       value: 
       objectReference: {fileID: 59534364}
+    - target: {fileID: 1586172137917458, guid: 0b1e7ee6fce95d648a327d2edcb7687e, type: 2}
+      propertyPath: m_Name
+      value: GKMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935247302400584, guid: 0b1e7ee6fce95d648a327d2edcb7687e, type: 2}
+      propertyPath: m_Name
+      value: Multiplier Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 114241701538243944, guid: 0b1e7ee6fce95d648a327d2edcb7687e,
+        type: 2}
+      propertyPath: m_Text
+      value: Goalkeeping Multiplier X2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b1e7ee6fce95d648a327d2edcb7687e, type: 2}
   m_IsPrefabAsset: 0
@@ -11994,7 +12046,7 @@ Prefab:
       objectReference: {fileID: 1957345152}
     - target: {fileID: 1069716667529684, guid: 0a9c9f823ef88d3478c286d92cf718f7, type: 2}
       propertyPath: m_Name
-      value: ST2Multiplyer
+      value: ST2Multiplier
       objectReference: {fileID: 0}
     - target: {fileID: 114144735748127952, guid: 0a9c9f823ef88d3478c286d92cf718f7,
         type: 2}
@@ -12026,6 +12078,15 @@ Prefab:
       propertyPath: PurchaseButton
       value: 
       objectReference: {fileID: 2140968821}
+    - target: {fileID: 1001035042314344, guid: 0a9c9f823ef88d3478c286d92cf718f7, type: 2}
+      propertyPath: m_Name
+      value: Multiplier Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 114543094014291738, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+        type: 2}
+      propertyPath: m_Text
+      value: Striker Multiplier X2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a9c9f823ef88d3478c286d92cf718f7, type: 2}
   m_IsPrefabAsset: 0
@@ -14551,6 +14612,19 @@ Prefab:
       propertyPath: PurchaseButtonImage
       value: 
       objectReference: {fileID: 1871405538}
+    - target: {fileID: 1961230323144744, guid: f632bd0377f49a74b895f79d06e5e9c5, type: 2}
+      propertyPath: m_Name
+      value: RMMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183999269856390, guid: f632bd0377f49a74b895f79d06e5e9c5, type: 2}
+      propertyPath: m_Name
+      value: Multiplier Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660476244092690, guid: f632bd0377f49a74b895f79d06e5e9c5,
+        type: 2}
+      propertyPath: m_Text
+      value: Right Midfield Multiplier X2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f632bd0377f49a74b895f79d06e5e9c5, type: 2}
   m_IsPrefabAsset: 0
@@ -14727,6 +14801,15 @@ Prefab:
       propertyPath: PurchaseButton
       value: 
       objectReference: {fileID: 1711925905}
+    - target: {fileID: 1918971619166634, guid: 403b6c3d3a24b944bba3db2c310c20d8, type: 2}
+      propertyPath: m_Name
+      value: CM2Multiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 114109107014741672, guid: 403b6c3d3a24b944bba3db2c310c20d8,
+        type: 2}
+      propertyPath: m_Text
+      value: Center Mid Multiplier X2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 403b6c3d3a24b944bba3db2c310c20d8, type: 2}
   m_IsPrefabAsset: 0
@@ -17073,6 +17156,19 @@ Prefab:
       propertyPath: PurchaseButton
       value: 
       objectReference: {fileID: 654146915}
+    - target: {fileID: 1556652742058388, guid: 8ed855c516de5ce48a86759f8a585c15, type: 2}
+      propertyPath: m_Name
+      value: LMMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288085320957164, guid: 8ed855c516de5ce48a86759f8a585c15, type: 2}
+      propertyPath: m_Name
+      value: Multiplier Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 114192919667842100, guid: 8ed855c516de5ce48a86759f8a585c15,
+        type: 2}
+      propertyPath: m_Text
+      value: Left Midfield Multiplier X2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed855c516de5ce48a86759f8a585c15, type: 2}
   m_IsPrefabAsset: 0
@@ -19218,6 +19314,19 @@ Prefab:
       propertyPath: PurchaseButton
       value: 
       objectReference: {fileID: 1873871265}
+    - target: {fileID: 1231238902583632, guid: 41e3b497e58d34746b24e62cd47cfe66, type: 2}
+      propertyPath: m_Name
+      value: CB1Multiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011525614873700, guid: 41e3b497e58d34746b24e62cd47cfe66, type: 2}
+      propertyPath: m_Name
+      value: Multiplier Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 114639192557696090, guid: 41e3b497e58d34746b24e62cd47cfe66,
+        type: 2}
+      propertyPath: m_Text
+      value: Center Back Multiplier X2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41e3b497e58d34746b24e62cd47cfe66, type: 2}
   m_IsPrefabAsset: 0
@@ -19305,6 +19414,19 @@ Prefab:
       propertyPath: TicketPurchaseButton
       value: 
       objectReference: {fileID: 716550595}
+    - target: {fileID: 1148289670062778, guid: 69d5c7572d2413b4ca18fc2eb532a004, type: 2}
+      propertyPath: m_Name
+      value: CM1Multiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 114624682009568316, guid: 69d5c7572d2413b4ca18fc2eb532a004,
+        type: 2}
+      propertyPath: m_Text
+      value: Center Mid Multiplier X2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727208723697816, guid: 69d5c7572d2413b4ca18fc2eb532a004, type: 2}
+      propertyPath: m_Name
+      value: Multiplier Name
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69d5c7572d2413b4ca18fc2eb532a004, type: 2}
   m_IsPrefabAsset: 0
@@ -20128,6 +20250,19 @@ Prefab:
       propertyPath: PurchaseButton
       value: 
       objectReference: {fileID: 1466810440}
+    - target: {fileID: 1069716667529684, guid: 0a9c9f823ef88d3478c286d92cf718f7, type: 2}
+      propertyPath: m_Name
+      value: ST1Multiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001035042314344, guid: 0a9c9f823ef88d3478c286d92cf718f7, type: 2}
+      propertyPath: m_Name
+      value: Multiplier Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 114543094014291738, guid: 0a9c9f823ef88d3478c286d92cf718f7,
+        type: 2}
+      propertyPath: m_Text
+      value: Striker Multiplier X2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a9c9f823ef88d3478c286d92cf718f7, type: 2}
   m_IsPrefabAsset: 0
